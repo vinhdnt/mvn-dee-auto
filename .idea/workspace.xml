@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a0560c6-375b-4903-91a1-831dfe21aedf" name="Default Changelist" comment="" />
+    <list default="true" id="1a0560c6-375b-4903-91a1-831dfe21aedf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +34,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/checkout/CO_01_Add_To_Cart.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-843">
+              <caret line="112" column="8" lean-forward="true" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -88,16 +94,19 @@
       <find>CART_ICON_HEADER</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/BasePage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/checkout/CO_01_Add_To_Cart.java" />
         <option value="$PROJECT_DIR$/src/main/java/dee/BasePageUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageUIs/BasePageUI.java" />
         <option value="$PROJECT_DIR$/src/test/resources/log4j.xml" />
         <option value="$PROJECT_DIR$/src/test/resources/runTestcasesClass.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/checkout/CO_01_Add_To_Cart.java" />
       </list>
     </option>
   </component>
@@ -108,11 +117,14 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="978" />
     <option name="height" value="1058" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -125,6 +137,11 @@
             <path>
               <item name="mvn-dee-auto" type="b2602c69:ProjectViewProjectNode" />
               <item name="mvn-dee-auto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mvn-dee-auto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mvn-dee-auto" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -172,15 +189,15 @@
       <updated>1638723418887</updated>
       <workItem from="1638723422819" duration="888000" />
       <workItem from="1638758246694" duration="1906000" />
-      <workItem from="1638760217925" duration="721000" />
+      <workItem from="1638760217925" duration="2557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3515000" />
+    <option name="totallyTimeSpent" value="5351000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <frame x="-7" y="-7" width="2062" height="1126" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13536464" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -277,7 +294,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/checkout/CO_01_Add_To_Cart.java">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-843">
+          <caret line="112" column="8" lean-forward="true" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

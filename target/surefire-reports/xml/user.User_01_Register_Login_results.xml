@@ -4,12 +4,12 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="44.368">
+           time="41.275">
   <properties />
   
   
-            <testcase name="TC_02_Logout" time="16.517" classname="user.User_01_Register_Login" />
-                <testcase name="TC_01_Register_With_Valid_User_Name_Password" time="24.211" classname="user.User_01_Register_Login" />
-                <testcase name="TC_03_Login_With_Valid_User_Name_Password" time="3.640" classname="user.User_01_Register_Login" />
+            <testcase name="TC_01_Register_With_Valid_User_Name_Password" time="20.200" classname="user.User_01_Register_Login" />
+                <testcase name="TC_03_Login_With_Valid_User_Name_Password" time="4.447" classname="user.User_01_Register_Login" />
+                <testcase name="TC_02_Logout" time="16.628" classname="user.User_01_Register_Login" />
       
 </testsuite>
