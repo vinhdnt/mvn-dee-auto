@@ -21,12 +21,12 @@ public class LoginPageObject extends BasePage {
 
 	public void inputEmailTextbox(String email) {
 		waitForElementVisible(driver, LoginPageUI.EMAIL_TEXTBOX);
-		sendkeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, email);
+		sendKeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, email);
 	}
 
 	public void inputPasswordTextbox(String password) {
 		waitForElementVisible(driver, LoginPageUI.PASSWORD_TEXTBOX);
-		sendkeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, password);
+		sendKeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, password);
 
 	}
 

@@ -1,7 +1,6 @@
 package commons;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -168,7 +167,7 @@ public class BasePage {
 		getElement(driver, getDynamicLocator(locator, params)).click();
 	}
 
-	public void sendkeyToElement(WebDriver driver, String locator, String value) {
+	public void sendKeyToElement(WebDriver driver, String locator, String value) {
 		getElement(driver, locator).clear();
 		getElement(driver, locator).sendKeys(value);
 	}
@@ -261,9 +260,9 @@ public class BasePage {
 	}
 
 	public boolean isElementUndisplayed(WebDriver driver, String locator) {
-		overrideGolbalTimeOut(driver, shortTimeOut);
+		overrideGlobalTimeOut(driver, shortTimeOut);
 		List<WebElement> elements = getElements(driver, locator);
-		overrideGolbalTimeOut(driver, longTimeOut);
+		overrideGlobalTimeOut(driver, longTimeOut);
 		if (elements.size() == 0) {
 			return true;
 		} else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
@@ -273,7 +272,7 @@ public class BasePage {
 		}
 	}
 
-	public void overrideGolbalTimeOut(WebDriver driver, long timeOut) {
+	public void overrideGlobalTimeOut(WebDriver driver, long timeOut) {
 		driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
 	}
 
@@ -485,9 +484,9 @@ public class BasePage {
 	}
 
 	public void checkAndClosePromoLayer(WebDriver driver) {
-		overrideGolbalTimeOut(driver, shortTimeOut);
+		overrideGlobalTimeOut(driver, shortTimeOut);
 		List<WebElement> elements = getElements(driver, BasePageUI.PROMO_LAYER);
-		overrideGolbalTimeOut(driver, longTimeOut);
+		overrideGlobalTimeOut(driver, longTimeOut);
 		if (elements.size() > 0) {
 			fluentWaitForElementAndClick(driver, BasePageUI.PROMO_LAYER_CLOSE_BUTTON);
 		}

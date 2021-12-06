@@ -28,22 +28,22 @@ public class CheckOutPageObject extends BasePage {
 
 	public void inputFirstNameTextbox(String firstName) {
 		waitForElementVisible(driver, CheckOutPageUI.FIRST_NAME_STEP_2_TEXTBOX);
-		sendkeyToElement(driver, CheckOutPageUI.FIRST_NAME_STEP_2_TEXTBOX, firstName);
+		sendKeyToElement(driver, CheckOutPageUI.FIRST_NAME_STEP_2_TEXTBOX, firstName);
 	}
 
 	public void inputLastNameTextbox(String lastName) {
 		waitForElementVisible(driver, CheckOutPageUI.LAST_NAME_STEP_2_TEXTBOX);
-		sendkeyToElement(driver, CheckOutPageUI.LAST_NAME_STEP_2_TEXTBOX, lastName);
+		sendKeyToElement(driver, CheckOutPageUI.LAST_NAME_STEP_2_TEXTBOX, lastName);
 	}
 
 	public void inputEmailTextbox(String email) {
 		waitForElementVisible(driver, CheckOutPageUI.EMAIL_REGISTER_STEP_2_TEXTBOX);
-		sendkeyToElement(driver, CheckOutPageUI.EMAIL_REGISTER_STEP_2_TEXTBOX, email);
+		sendKeyToElement(driver, CheckOutPageUI.EMAIL_REGISTER_STEP_2_TEXTBOX, email);
 	}
 
 	public void inputPasswordTextbox(String password) {
 		waitForElementVisible(driver, CheckOutPageUI.PASSWORD_REGISTER_STEP_2_TEXTBOX);
-		sendkeyToElement(driver, CheckOutPageUI.PASSWORD_REGISTER_STEP_2_TEXTBOX, password);
+		sendKeyToElement(driver, CheckOutPageUI.PASSWORD_REGISTER_STEP_2_TEXTBOX, password);
 	}
 
 	public void selectDateOfBirth(String birthDay) {
@@ -60,12 +60,12 @@ public class CheckOutPageObject extends BasePage {
 
 	public void inputStreetInvoiceAddress(String streetInvoiceAddress) {
 		waitForElementVisible(driver, CheckOutPageUI.INVOICE_ADDRESS_STREET_STEP_2_TEXTBOX);
-		sendkeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_STREET_STEP_2_TEXTBOX, streetInvoiceAddress);
+		sendKeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_STREET_STEP_2_TEXTBOX, streetInvoiceAddress);
 	}
 
 	public void inputHouseNumberInvoiceAddress(String houseNumberInvoiceAddress) {
 		waitForElementVisible(driver, CheckOutPageUI.INVOICE_ADDRESS_HOUSE_NUMBER_STEP_2_TEXTBOX);
-		sendkeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_HOUSE_NUMBER_STEP_2_TEXTBOX, houseNumberInvoiceAddress);
+		sendKeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_HOUSE_NUMBER_STEP_2_TEXTBOX, houseNumberInvoiceAddress);
 
 	}
 
@@ -73,26 +73,26 @@ public class CheckOutPageObject extends BasePage {
 		waitForElementVisible(driver, CheckOutPageUI.INVOICE_ADDRESS_ZIPCODE_STEP_2_TEXTBOX);
 		switch (getCurrentlyTenant(driver)) {
 		case "de":
-			sendkeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_ZIPCODE_STEP_2_TEXTBOX, zipCode[0][1]);
+			sendKeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_ZIPCODE_STEP_2_TEXTBOX, zipCode[0][1]);
 			break;
 		case "at":
-			sendkeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_ZIPCODE_STEP_2_TEXTBOX, zipCode[1][1]);
+			sendKeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_ZIPCODE_STEP_2_TEXTBOX, zipCode[1][1]);
 			break;
 		case "ch":
-			sendkeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_ZIPCODE_STEP_2_TEXTBOX, zipCode[2][1]);
+			sendKeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_ZIPCODE_STEP_2_TEXTBOX, zipCode[2][1]);
 			break;
 		case "fr":
-			sendkeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_ZIPCODE_STEP_2_TEXTBOX, zipCode[3][1]);
+			sendKeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_ZIPCODE_STEP_2_TEXTBOX, zipCode[3][1]);
 			break;
 		case "nl":
-			sendkeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_ZIPCODE_STEP_2_TEXTBOX, zipCode[4][1]);
+			sendKeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_ZIPCODE_STEP_2_TEXTBOX, zipCode[4][1]);
 			break;
 		}
 	}
 
 	public void inputCityInvoiceAddress(String cityInvoiceAddress) {
 		waitForElementVisible(driver, CheckOutPageUI.INVOICE_ADDRESS_CITY_STEP_2_TEXTBOX);
-		sendkeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_CITY_STEP_2_TEXTBOX, cityInvoiceAddress);
+		sendKeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_CITY_STEP_2_TEXTBOX, cityInvoiceAddress);
 	}
 
 	public void checkConfirmationCheckbox() {
@@ -127,12 +127,12 @@ public class CheckOutPageObject extends BasePage {
 
 	public void inputEmailLoginTextbox(String emailLogin) {
 		waitForElementVisible(driver, CheckOutPageUI.EMAIL_LOGIN_TEXTBOX);
-		sendkeyToElement(driver, CheckOutPageUI.EMAIL_LOGIN_TEXTBOX, emailLogin);
+		sendKeyToElement(driver, CheckOutPageUI.EMAIL_LOGIN_TEXTBOX, emailLogin);
 	}
 
 	public void inputPasswordLoginTextbox(String password) {
 		waitForElementVisible(driver, CheckOutPageUI.PASSWORD_LOGIN_TEXTBOX);
-		sendkeyToElement(driver, CheckOutPageUI.PASSWORD_LOGIN_TEXTBOX, password);
+		sendKeyToElement(driver, CheckOutPageUI.PASSWORD_LOGIN_TEXTBOX, password);
 	}
 
 	public void clickOnLoginSubmitButton() {

@@ -19,6 +19,7 @@ public class CO_01_Add_To_Cart extends BaseTest {
 	BasePage basepage;
 	private String productName, productSize, productPrice, productAddedPrice, productAddedName, producAddedSize;
 	
+
 	@Parameters({ "browser", "url" })
 	@BeforeClass
 	public void initBrowser(String browserName, String url) {
@@ -110,7 +111,7 @@ public class CO_01_Add_To_Cart extends BaseTest {
 		productListPage.clickOnRemoveIconByIndex("0");
 		
 		sleepInSecond(2);
-		
+
 		log.info("TC_02_Remove_Product_From_Cart - Step 4: Verify 'cart slide layer' is undisplayed ");
 		verifyTrue(productListPage.isCartSlideLayerUndisplayed());
 		
