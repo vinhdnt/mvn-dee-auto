@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Smoke Test DE">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="commons.MethodListener" />
+	</listeners>
+
+	<test name="Test on DE_de">
+		<parameter name="url" value="https://www.deerberg.de/de" />
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="user.User_01_Register_Login" />
+<!-- 			<class name="com.dee.checkout.CO_01_Add_To_Cart" /> -->
+<!-- 			<class name="com.dee.checkout.CO_02_Check_Out_Main_Flow" /> -->
+			<!-- <class name="com.dee.url.Check_Broken_URL" /> -->
+		</classes>
+	</test>
+
+</suite>

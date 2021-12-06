@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:49:55,190] Pre-condition - Step 01:Init browser 'chrome' And go to Homepage to: https://www.deerberg.de/de
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:14,868] TC_01_Register_With_Valid_User_Name_Password - Step 2: Verify 'Wordpress page home page' is displayed
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:15,020]  -------------------------- PASSED -------------------------- 
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:15,024] TC_01_Register_With_Valid_User_Name_Password - Step 3: Verify 'Cookie consent' is displayed
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:15,359]  -------------------------- PASSED -------------------------- 
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:15,359] TC_01_Register_With_Valid_User_Name_Password - Step 4: Click on 'accept Cookie Consent' button
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:15,454] TC_01_Register_With_Valid_User_Name_Password - Step 5: Click on 'My account' on header
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:16,811] TC_01_Register_With_Valid_User_Name_Password - Step 6: Check and close 'promo layer'
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:31,886] TC_01_Register_With_Valid_User_Name_Password - Step 7: Click on 'Register' button
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:33,217] TC_01_Register_With_Valid_User_Name_Password - Step 8: Select 'Gender' dropdown
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:33,342] TC_01_Register_With_Valid_User_Name_Password - Step 9: Input 'First name' textbox
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:33,500] TC_01_Register_With_Valid_User_Name_Password - Step 10: Input 'Last name' textbox
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:33,648] TC_01_Register_With_Valid_User_Name_Password - Step 11: Input 'Email' textbox: postmaster+de14660@deerberg.dev.mgm-tp.com
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:33,988] TC_01_Register_With_Valid_User_Name_Password - Step 12: Input 'Password' textbox: 123123123
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:34,148] TC_01_Register_With_Valid_User_Name_Password - Step 13: Check on 'Comfirmation' checkbox
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:34,210] TC_01_Register_With_Valid_User_Name_Password - Step 14: Click on 'Register submit' button
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:34,343] TC_01_Register_With_Valid_User_Name_Password - Step 15: Verify 'Logout' button on header is displayed
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:38,705]  -------------------------- PASSED -------------------------- 
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:38,706] TC_01_Register_With_Valid_User_Name_Password - Step 16: Verify 'Register success msg' is displayed
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:38,829]  -------------------------- PASSED -------------------------- 
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:38,829] TC_01_Register_With_Valid_User_Name_Password - Step 17: Verify 'User's full name'
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:38,901]  -------------------------- PASSED -------------------------- 
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:39,082] TC_02_Logout - Step 1: Click on 'Logout' button on header
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:40,518] TC_02_Logout - Step 2: Verify 'Wordpress page home page' is displayed
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:40,580]  -------------------------- PASSED -------------------------- 
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:40,580] TC_02_Logout - Step 3: Verify 'Logout' button on header is undisplayed
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:55,596]  -------------------------- PASSED -------------------------- 
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:55,628] TC_03_Login_With_Valid_User_Name_Password - Step 1: Click on 'My account' on header
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:56,941] TC_03_Login_With_Valid_User_Name_Password - Step 2: Input 'Email' textbox: postmaster+de14660@deerberg.dev.mgm-tp.com
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:57,135] TC_03_Login_With_Valid_User_Name_Password - Step 3: Input 'Password' textbox: 123123123
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:57,274] TC_03_Login_With_Valid_User_Name_Password - Step 4: Click on 'Login' submit button
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:58,575] TC_03_Login_With_Valid_User_Name_Password - Step 5: Verify 'Logout' button on header is displayed
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:59,186]  -------------------------- PASSED -------------------------- 
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:59,186] TC_03_Login_With_Valid_User_Name_Password - Step 6: Verify 'User's full name'
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:59,254]  -------------------------- PASSED -------------------------- 
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:59,254] TC_03_Login_With_Valid_User_Name_Password - Step 7: Get all 'Cookies logged-in'
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:59,268] Close browser
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:59,269] OS name = windows 10
+]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2021-12-06 09:50:59,269] Driver instance name = windows 10
+]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2021-12-06T02:49:55Z" name="Smoke Test DE" finished-at="2021-12-06T02:51:00Z" duration-ms="65445">
+    <groups>
+    </groups>
+    <test started-at="2021-12-06T02:49:55Z" name="Test on DE_de" finished-at="2021-12-06T02:51:00Z" duration-ms="65445">
+      <class name="user.User_01_Register_Login">
+        <test-method is-config="true" signature="initBrowser(java.lang.String, java.lang.String)[pri:0, instance:user.User_01_Register_Login@2d000e80]" started-at="2021-12-06T02:49:55Z" name="initBrowser" finished-at="2021-12-06T02:50:14Z" duration-ms="19517" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.deerberg.de/de]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:49:55,190] Pre-condition - Step 01:Init browser 'chrome' And go to Homepage to: https://www.deerberg.de/de
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- initBrowser -->
+        <test-method signature="TC_01_Register_With_Valid_User_Name_Password()[pri:0, instance:user.User_01_Register_Login@2d000e80]" started-at="2021-12-06T02:50:14Z" name="TC_01_Register_With_Valid_User_Name_Password" finished-at="2021-12-06T02:50:38Z" duration-ms="24211" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:14,868] TC_01_Register_With_Valid_User_Name_Password - Step 2: Verify 'Wordpress page home page' is displayed
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:15,020]  -------------------------- PASSED -------------------------- 
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:15,024] TC_01_Register_With_Valid_User_Name_Password - Step 3: Verify 'Cookie consent' is displayed
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:15,359]  -------------------------- PASSED -------------------------- 
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:15,359] TC_01_Register_With_Valid_User_Name_Password - Step 4: Click on 'accept Cookie Consent' button
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:15,454] TC_01_Register_With_Valid_User_Name_Password - Step 5: Click on 'My account' on header
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:16,811] TC_01_Register_With_Valid_User_Name_Password - Step 6: Check and close 'promo layer'
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:31,886] TC_01_Register_With_Valid_User_Name_Password - Step 7: Click on 'Register' button
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:33,217] TC_01_Register_With_Valid_User_Name_Password - Step 8: Select 'Gender' dropdown
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:33,342] TC_01_Register_With_Valid_User_Name_Password - Step 9: Input 'First name' textbox
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:33,500] TC_01_Register_With_Valid_User_Name_Password - Step 10: Input 'Last name' textbox
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:33,648] TC_01_Register_With_Valid_User_Name_Password - Step 11: Input 'Email' textbox: postmaster+de14660@deerberg.dev.mgm-tp.com
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:33,988] TC_01_Register_With_Valid_User_Name_Password - Step 12: Input 'Password' textbox: 123123123
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:34,148] TC_01_Register_With_Valid_User_Name_Password - Step 13: Check on 'Comfirmation' checkbox
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:34,210] TC_01_Register_With_Valid_User_Name_Password - Step 14: Click on 'Register submit' button
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:34,343] TC_01_Register_With_Valid_User_Name_Password - Step 15: Verify 'Logout' button on header is displayed
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:38,705]  -------------------------- PASSED -------------------------- 
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:38,706] TC_01_Register_With_Valid_User_Name_Password - Step 16: Verify 'Register success msg' is displayed
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:38,829]  -------------------------- PASSED -------------------------- 
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:38,829] TC_01_Register_With_Valid_User_Name_Password - Step 17: Verify 'User's full name'
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:38,901]  -------------------------- PASSED -------------------------- 
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_01_Register_With_Valid_User_Name_Password -->
+        <test-method signature="TC_02_Logout()[pri:0, instance:user.User_01_Register_Login@2d000e80]" started-at="2021-12-06T02:50:39Z" name="TC_02_Logout" finished-at="2021-12-06T02:50:55Z" duration-ms="16517" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:39,082] TC_02_Logout - Step 1: Click on 'Logout' button on header
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:40,518] TC_02_Logout - Step 2: Verify 'Wordpress page home page' is displayed
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:40,580]  -------------------------- PASSED -------------------------- 
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:40,580] TC_02_Logout - Step 3: Verify 'Logout' button on header is undisplayed
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:55,596]  -------------------------- PASSED -------------------------- 
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_02_Logout -->
+        <test-method signature="TC_03_Login_With_Valid_User_Name_Password()[pri:0, instance:user.User_01_Register_Login@2d000e80]" started-at="2021-12-06T02:50:55Z" name="TC_03_Login_With_Valid_User_Name_Password" finished-at="2021-12-06T02:50:59Z" duration-ms="3640" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:55,628] TC_03_Login_With_Valid_User_Name_Password - Step 1: Click on 'My account' on header
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:56,941] TC_03_Login_With_Valid_User_Name_Password - Step 2: Input 'Email' textbox: postmaster+de14660@deerberg.dev.mgm-tp.com
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:57,135] TC_03_Login_With_Valid_User_Name_Password - Step 3: Input 'Password' textbox: 123123123
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:57,274] TC_03_Login_With_Valid_User_Name_Password - Step 4: Click on 'Login' submit button
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:58,575] TC_03_Login_With_Valid_User_Name_Password - Step 5: Verify 'Logout' button on header is displayed
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:59,186]  -------------------------- PASSED -------------------------- 
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:59,186] TC_03_Login_With_Valid_User_Name_Password - Step 6: Verify 'User's full name'
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:59,254]  -------------------------- PASSED -------------------------- 
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:59,254] TC_03_Login_With_Valid_User_Name_Password - Step 7: Get all 'Cookies logged-in'
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_03_Login_With_Valid_User_Name_Password -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:user.User_01_Register_Login@2d000e80]" started-at="2021-12-06T02:50:59Z" name="afterClass" finished-at="2021-12-06T02:51:00Z" duration-ms="1294" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:59,268] Close browser
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:59,269] OS name = windows 10
+]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-12-06 09:50:59,269] Driver instance name = windows 10
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- user.User_01_Register_Login -->
+    </test> <!-- Test on DE_de -->
+  </suite> <!-- Smoke Test DE -->
+</testng-results>

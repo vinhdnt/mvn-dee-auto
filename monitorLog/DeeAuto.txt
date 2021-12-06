@@ -1,0 +1,39 @@
+[INFO ] [2021-12-06 09:49:55,190] Pre-condition - Step 01:Init browser 'chrome' And go to Homepage to: https://www.deerberg.de/de
+[INFO ] [2021-12-06 09:50:14,868] TC_01_Register_With_Valid_User_Name_Password - Step 2: Verify 'Wordpress page home page' is displayed
+[INFO ] [2021-12-06 09:50:15,020]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-06 09:50:15,024] TC_01_Register_With_Valid_User_Name_Password - Step 3: Verify 'Cookie consent' is displayed
+[INFO ] [2021-12-06 09:50:15,359]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-06 09:50:15,359] TC_01_Register_With_Valid_User_Name_Password - Step 4: Click on 'accept Cookie Consent' button
+[INFO ] [2021-12-06 09:50:15,454] TC_01_Register_With_Valid_User_Name_Password - Step 5: Click on 'My account' on header
+[INFO ] [2021-12-06 09:50:16,811] TC_01_Register_With_Valid_User_Name_Password - Step 6: Check and close 'promo layer'
+[INFO ] [2021-12-06 09:50:31,886] TC_01_Register_With_Valid_User_Name_Password - Step 7: Click on 'Register' button
+[INFO ] [2021-12-06 09:50:33,217] TC_01_Register_With_Valid_User_Name_Password - Step 8: Select 'Gender' dropdown
+[INFO ] [2021-12-06 09:50:33,342] TC_01_Register_With_Valid_User_Name_Password - Step 9: Input 'First name' textbox
+[INFO ] [2021-12-06 09:50:33,500] TC_01_Register_With_Valid_User_Name_Password - Step 10: Input 'Last name' textbox
+[INFO ] [2021-12-06 09:50:33,648] TC_01_Register_With_Valid_User_Name_Password - Step 11: Input 'Email' textbox: postmaster+de14660@deerberg.dev.mgm-tp.com
+[INFO ] [2021-12-06 09:50:33,988] TC_01_Register_With_Valid_User_Name_Password - Step 12: Input 'Password' textbox: 123123123
+[INFO ] [2021-12-06 09:50:34,148] TC_01_Register_With_Valid_User_Name_Password - Step 13: Check on 'Comfirmation' checkbox
+[INFO ] [2021-12-06 09:50:34,210] TC_01_Register_With_Valid_User_Name_Password - Step 14: Click on 'Register submit' button
+[INFO ] [2021-12-06 09:50:34,343] TC_01_Register_With_Valid_User_Name_Password - Step 15: Verify 'Logout' button on header is displayed
+[INFO ] [2021-12-06 09:50:38,705]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-06 09:50:38,706] TC_01_Register_With_Valid_User_Name_Password - Step 16: Verify 'Register success msg' is displayed
+[INFO ] [2021-12-06 09:50:38,829]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-06 09:50:38,829] TC_01_Register_With_Valid_User_Name_Password - Step 17: Verify 'User's full name'
+[INFO ] [2021-12-06 09:50:38,901]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-06 09:50:39,082] TC_02_Logout - Step 1: Click on 'Logout' button on header
+[INFO ] [2021-12-06 09:50:40,518] TC_02_Logout - Step 2: Verify 'Wordpress page home page' is displayed
+[INFO ] [2021-12-06 09:50:40,580]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-06 09:50:40,580] TC_02_Logout - Step 3: Verify 'Logout' button on header is undisplayed
+[INFO ] [2021-12-06 09:50:55,596]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-06 09:50:55,628] TC_03_Login_With_Valid_User_Name_Password - Step 1: Click on 'My account' on header
+[INFO ] [2021-12-06 09:50:56,941] TC_03_Login_With_Valid_User_Name_Password - Step 2: Input 'Email' textbox: postmaster+de14660@deerberg.dev.mgm-tp.com
+[INFO ] [2021-12-06 09:50:57,135] TC_03_Login_With_Valid_User_Name_Password - Step 3: Input 'Password' textbox: 123123123
+[INFO ] [2021-12-06 09:50:57,274] TC_03_Login_With_Valid_User_Name_Password - Step 4: Click on 'Login' submit button
+[INFO ] [2021-12-06 09:50:58,575] TC_03_Login_With_Valid_User_Name_Password - Step 5: Verify 'Logout' button on header is displayed
+[INFO ] [2021-12-06 09:50:59,186]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-06 09:50:59,186] TC_03_Login_With_Valid_User_Name_Password - Step 6: Verify 'User's full name'
+[INFO ] [2021-12-06 09:50:59,254]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-06 09:50:59,254] TC_03_Login_With_Valid_User_Name_Password - Step 7: Get all 'Cookies logged-in'
+[INFO ] [2021-12-06 09:50:59,268] Close browser
+[INFO ] [2021-12-06 09:50:59,269] OS name = windows 10
+[INFO ] [2021-12-06 09:50:59,269] Driver instance name = windows 10
