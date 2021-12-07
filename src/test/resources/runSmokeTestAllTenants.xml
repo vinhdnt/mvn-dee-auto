@@ -11,9 +11,9 @@
 		<parameter name="url" value="https://www.deerberg.de/de" />
 		<parameter name="browser" value="chrome" />
 		<packages>
-			<package name="com.dee.user" />
-			<package name="com.dee.checkout" />
-<!-- 			<package name="com.dee.url" /> -->
+			<package name="user" />
+			<package name="checkout" />
+<!-- 			<package name="url" /> -->
 		</packages>
 	</test>
 
@@ -21,9 +21,9 @@
 		<parameter name="url" value="https://www.deerberg.ch/de" />
 		<parameter name="browser" value="chrome" />
 		<packages>
-			<package name="com.dee.user" />
-			<package name="com.dee.checkout" />
-<!-- 			<package name="com.dee.url" /> -->
+			<package name="user" />
+			<package name="checkout" />
+<!-- 			<package name="url" /> -->
 		</packages>
 	</test>
 
@@ -31,9 +31,9 @@
 		<parameter name="url" value="https://www.deerberg.ch/fr" />
 		<parameter name="browser" value="chrome" />
 		<packages>
-			<package name="com.dee.user" />
-			<package name="com.dee.checkout" />
-<!-- 			<package name="com.dee.url" /> -->
+			<package name="user" />
+			<package name="checkout" />
+<!-- 			<package name="url" /> -->
 		</packages>
 	</test>
 
@@ -42,8 +42,8 @@
 		<parameter name="url" value="https://www.deerberg.at/de" />
 		<parameter name="browser" value="chrome" />
 		<packages>
-			<package name="com.dee.user" />
-			<package name="com.dee.checkout" />
+			<package name="user" />
+			<package name="checkout" />
 <!-- 			<package name="com.dee.url" /> -->
 		</packages>
 	</test>
@@ -53,8 +53,8 @@
 		<parameter name="url" value="https://www.deerberg.nl/nl" />
 		<parameter name="browser" value="chrome" />
 		<packages>
-			<package name="com.dee.user" />
-			<package name="com.dee.checkout" />
+			<package name="user" />
+			<package name="checkout" />
 <!-- 			<package name="com.dee.url" /> -->
 		</packages>
 	</test>

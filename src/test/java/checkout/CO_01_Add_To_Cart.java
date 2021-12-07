@@ -1,7 +1,6 @@
 package checkout;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -17,7 +16,7 @@ import pageObjects.ProductListPageObject;
 public class CO_01_Add_To_Cart extends BaseTest {
 	WebDriver driver;
 	BasePage basepage;
-	private String productName, productSize, productPrice, productAddedPrice, productAddedName, producAddedSize;
+	private String productName, productSize, productPrice, productAddedPrice, productAddedName, productAddedSize;
 	
 
 	@Parameters({ "browser", "url" })
@@ -72,7 +71,7 @@ public class CO_01_Add_To_Cart extends BaseTest {
 		productAddedName = productListPage.getProductAddedName();
 		
 		log.info("TC_01_Add_To_Cart_At_PDL - Step 16: Get 'product-added's size'");
-		producAddedSize = productListPage.getProductAddedSize();
+		productAddedSize = productListPage.getProductAddedSize();
 		
 		log.info("TC_01_Add_To_Cart_At_PDL - Step 17: Get 'product-added' price");
 		productAddedPrice = productListPage.getProductAddedPrice();
@@ -149,7 +148,7 @@ public class CO_01_Add_To_Cart extends BaseTest {
 		productAddedName = productDetailPage.getProductAddedName();
 		
 		log.info("TC_03_Add_To_Cart_At_PDP - Step 9: Verify 'product-added's size'");
-		producAddedSize = productDetailPage.getProductAddedSize();
+		productAddedSize = productDetailPage.getProductAddedSize();
 		
 		log.info("TC_03_Add_To_Cart_At_PDP - Step 10: Verify 'product-added's price'");
 		productAddedPrice = productDetailPage.getProductAddedPrice();		
@@ -158,7 +157,7 @@ public class CO_01_Add_To_Cart extends BaseTest {
 		verifyTrue(productAddedName.equals(productName)); 
 				
 		log.info("TC_03_Add_To_Cart_At_PDP - Step 12: Verify 'product-added's size'");
-		verifyEquals(productSize, producAddedSize);
+		verifyEquals(productSize, productAddedSize);
 		
 		log.info("TC_03_Add_To_Cart_At_PDP - Step 13: Verify 'product-added's price'");
 		verifyEquals(productPrice, productAddedPrice);		

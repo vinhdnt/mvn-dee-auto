@@ -232,7 +232,7 @@ public class CO_02_Check_Out_Main_Flow extends BaseTest {
 		log.info("TC_03_Check_Out_As_User_Log_In_At_Step_2 - Step 11: Input Email Login textbox at step 2 checkout: " + emailLogin);
 		checkOutPage.inputEmailLoginTextbox(emailLogin);
 		
-		log.info("TC_03_Check_Out_As_User_Log_In_At_Step_2 - Step 12: Input Password Login textbox at step 2 checkout: " + 123123123);
+		log.info("TC_03_Check_Out_As_User_Log_In_At_Step_2 - Step 12: Input Password Login textbox at step 2 checkout: " + password);
 		checkOutPage.inputPasswordLoginTextbox(password);
 		
 		log.info("TC_03_Check_Out_As_User_Log_In_At_Step_2 - Step 13: Click on 'Login submit' button");
