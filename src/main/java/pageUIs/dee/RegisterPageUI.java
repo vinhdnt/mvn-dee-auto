@@ -11,7 +11,4 @@ public class RegisterPageUI {
 	public static final String REGISTER_SUBMIT_BUTTON = "//input[@id='registration_submit_btn']";
 	public static final String PROMO_LAYER = "//div[@data-wps-popup-content]";
 	public static final String PROMO_LAYER_CLOSE_BUTTON = "//div[@aria-label='close']";
-	
-	
-
 }

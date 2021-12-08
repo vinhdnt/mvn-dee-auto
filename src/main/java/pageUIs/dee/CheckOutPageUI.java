@@ -23,14 +23,9 @@ public class CheckOutPageUI {
 	public static final String PASSWORD_LOGIN_TEXTBOX = "//input[@id='qs_password']";
 	public static final String LOGIN_SUBMIT_BUTTON = "//input[@id='checkoutLoginSubmit']";
 
-	
-	
 	public static final String PAYMENT_METHODS = "//div[@class='panel payment-method']";
 	public static final String DYNAMIC_PAYMENT_METHOD_BY_INDEX = "//div[@class='panel payment-method'][%s]";
 	public static final String DYNAMIC_PAYMENT_METHOD_BY_NAME = "//label[contains(text(),'%s')]";
 	public static final String SUBMIT_STEP_3_BUTTON = "//input[@id='payment_submit_btn']";
-
-	
-	
 	
 }

@@ -8,5 +8,4 @@ public class HomePageUI {
 	public static final String PROMO_LAYER = "//div[@data-wps-popup-content]";
 	public static final String HOMEPAGE_CONTENT_DIV = "//div[contains(@class,'default-home')]";
 
-
 }

@@ -8,5 +8,4 @@ public class LoginPageUI {
 	public static final String PASSWORD_TEXTBOX = "//input[@id='passwordPwd']";
 	public static final String LOGIN_SUBMIT_BUTTON = "//input[@id='btn_loginSubmit']";
 
-
 }

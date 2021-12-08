@@ -7,7 +7,7 @@
 		<listener class-name="commons.MethodListener" />
 	</listeners>
 	<test name="Test on DE_de">
-		<parameter name="url" value="https://www.deerberg.nl/nl" />
+		<parameter name="url" value="https://www.deerberg.de/de" />
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="user.User_01_Register_Login" />

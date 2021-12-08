@@ -10,8 +10,5 @@ public class ProductDetailPageUI {
 	public static final String PRODUCT_ONE_SIZE = "//div[contains(@class,'select-size')]//div[contains(@class,'oneSize-container')]";
 	
 	public static final String ADD2CART_BUTTON = "//input[@id='addToBasket']";
-	
-	
-
 
 }

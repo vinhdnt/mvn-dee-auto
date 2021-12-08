@@ -26,5 +26,4 @@ public class BasePageUI {
 	
 	public static final String ALL_URL = "//*[@href]";
 
-	
 }

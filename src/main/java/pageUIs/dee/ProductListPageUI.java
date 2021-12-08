@@ -11,8 +11,5 @@ public class ProductListPageUI {
 
 	public static final String DYNAMIC_SHOW_EXPAND_PRODUCT_BUTTON = "//div[contains(@class,'product_container')][%s]//div[@class='show-popup-addToBasket']//span";
 	public static final String ADD2CART_BUTTON = "//input[starts-with(@id,'addToBasket')]";
-	
-	
-	
 
 }
