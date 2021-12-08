@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test on DE_de"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="97.684">
+  <properties />
+  
+  
+            <testcase name="TC_01_Register_With_Valid_User_Name_Password" time="55.122" classname="user.User_01_Register_Login" />
+                <testcase name="TC_03_Login_With_Valid_User_Name_Password" time="8.974" classname="user.User_01_Register_Login" />
+                <testcase name="TC_02_Logout" time="33.588" classname="user.User_01_Register_Login" />
+      
+</testsuite>

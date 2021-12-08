@@ -485,9 +485,12 @@ public class BasePage {
 
 	public void checkAndClosePromoLayer(WebDriver driver) {
 		overrideGlobalTimeOut(driver, shortTimeOut);
+		sleepInSecond(5);
 		List<WebElement> elements = getElements(driver, BasePageUI.PROMO_LAYER);
 		overrideGlobalTimeOut(driver, longTimeOut);
+		System.out.println(elements.size());
 		if (elements.size() > 0) {
+			waitForElementVisible(driver, BasePageUI.PROMO_LAYER);
 			fluentWaitForElementAndClick(driver, BasePageUI.PROMO_LAYER_CLOSE_BUTTON);
 		}
 	}
@@ -536,8 +539,8 @@ public class BasePage {
 	private Alert alert;
 	private Select select;
 	private Actions action;
-	private long longTimeOut = 45;
-	private long shortTimeOut = 15;
+	private long longTimeOut = 60;
+	private long shortTimeOut = 30;
 	private WebDriverWait explicitWait;
 	private JavascriptExecutor jsExecutor;
 	private FluentWait<WebDriver> fluentDriver;

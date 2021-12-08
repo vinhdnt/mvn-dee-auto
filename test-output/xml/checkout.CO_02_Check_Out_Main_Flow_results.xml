@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test on DE_de"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="199.033">
+  <properties />
+  
+  
+            <testcase name="TC_01_Check_Out_As_New_Register_User" time="85.480" classname="checkout.CO_02_Check_Out_Main_Flow" />
+                <testcase name="TC_02_Check_Out_As_Guest_User" time="53.610" classname="checkout.CO_02_Check_Out_Main_Flow" />
+                <testcase name="TC_03_Check_Out_As_User_Log_In_At_Step_2" time="59.943" classname="checkout.CO_02_Check_Out_Main_Flow" />
+      
+</testsuite>

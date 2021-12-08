@@ -97,7 +97,6 @@ public class ProductListPageObject extends BasePage {
 	}
 
 	public int getProductsListSize() {
-		waitForAllElementsVisible(driver, ProductListPageUI.PRODUCTS_LIST);
 		return getElementsSize(driver, ProductListPageUI.PRODUCTS_LIST);
 	}
 

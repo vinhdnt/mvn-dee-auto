@@ -37,8 +37,8 @@ public class CO_01_Add_To_Cart extends BaseTest {
 		log.info("TC_01_Add_To_Cart_At_PDL - Step 4: Click on accept 'Cookie Consent'");
 		homePage.clickOnAcceptCookieConsentButton();
 
-		log.info("TC_01_Add_To_Cart_At_PDL - Step 5: Click on '3rd-category' on 'Top Category'"); 
-		productListPage = homePage.clickOnCategoryHeaderByIndex("3");
+		log.info("TC_01_Add_To_Cart_At_PDL - Step 5: Click on '2nd-category' on 'Top Category'");
+		productListPage = homePage.clickOnCategoryHeaderByIndex("2");
 
 		log.info("TC_01_Add_To_Cart_At_PDL - Step 6: Check and close 'promo-layer'"); 
 		productListPage.checkAndClosePromoLayer(driver);
@@ -71,7 +71,7 @@ public class CO_01_Add_To_Cart extends BaseTest {
 		productAddedName = productListPage.getProductAddedName();
 		
 		log.info("TC_01_Add_To_Cart_At_PDL - Step 16: Get 'product-added's size'");
-		productAddedSize = productListPage.getProductAddedSize();
+		//productAddedSize = productListPage.getProductAddedSize();
 		
 		log.info("TC_01_Add_To_Cart_At_PDL - Step 17: Get 'product-added' price");
 		productAddedPrice = productListPage.getProductAddedPrice();
@@ -80,7 +80,7 @@ public class CO_01_Add_To_Cart extends BaseTest {
 		verifyTrue(productAddedName.contains(productName));
 
 		log.info("TC_01_Add_To_Cart_At_PDL - Step 19: Verify 'product-added's size' ");
-		verifyEquals(productSize, productSize);
+		//verifyEquals(productSize, productAddedPrice);
 		
 		log.info("TC_01_Add_To_Cart_At_PDL - Step 20: Verify 'product-added's price' ");
 		verifyEquals(productPrice, productAddedPrice);
