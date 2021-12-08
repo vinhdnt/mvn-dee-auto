@@ -150,7 +150,7 @@
                 <configuration>
                     <!-- Run TestNG xml file -->
                     <suiteXmlFiles>
-                        <file>src/test/resources/runTestcasesClass.xml</file>
+                        <file>src/test/resources/runSmokeTestAllTenants.xml</file>
                     </suiteXmlFiles>
 
                     <!-- Argument -->
