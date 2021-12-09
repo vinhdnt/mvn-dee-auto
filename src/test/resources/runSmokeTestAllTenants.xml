@@ -9,7 +9,6 @@
 
 	<test name="Test on DE_de">
 		<parameter name="url" value="https://www.deerberg.de/de" />
-		<parameter name="browser" value="chrome" />
 		<packages>
 			<package name="user" />
 			<package name="checkout" />
@@ -19,7 +18,6 @@
 
 	<test name="Test on CH_de">
 		<parameter name="url" value="https://www.deerberg.ch/de" />
-		<parameter name="browser" value="chrome" />
 		<packages>
 			<package name="user" />
 			<package name="checkout" />
@@ -29,7 +27,6 @@
 
 	<test name="Test on CH_fr">
 		<parameter name="url" value="https://www.deerberg.ch/fr" />
-		<parameter name="browser" value="chrome" />
 		<packages>
 			<package name="user" />
 			<package name="checkout" />
@@ -40,7 +37,6 @@
 
 	<test name="Test on AT_de">
 		<parameter name="url" value="https://www.deerberg.at/de" />
-		<parameter name="browser" value="chrome" />
 		<packages>
 			<package name="user" />
 			<package name="checkout" />
@@ -51,7 +47,6 @@
 
 	<test name="Test on NL_nl">
 		<parameter name="url" value="https://www.deerberg.nl/nl" />
-		<parameter name="browser" value="chrome" />
 		<packages>
 			<package name="user" />
 			<package name="checkout" />
