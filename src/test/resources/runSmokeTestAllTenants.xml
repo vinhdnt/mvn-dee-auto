@@ -13,7 +13,7 @@
 		<packages>
 			<package name="user" />
 			<package name="checkout" />
-<!-- 			<package name="url" /> -->
+ 			<package name="url" />
 		</packages>
 	</test>
 
@@ -23,7 +23,7 @@
 		<packages>
 			<package name="user" />
 			<package name="checkout" />
-<!-- 			<package name="url" /> -->
+ 			<package name="url" />
 		</packages>
 	</test>
 
@@ -33,7 +33,7 @@
 		<packages>
 			<package name="user" />
 			<package name="checkout" />
-<!-- 			<package name="url" /> -->
+ 			<package name="url" />
 		</packages>
 	</test>
 
@@ -44,7 +44,7 @@
 		<packages>
 			<package name="user" />
 			<package name="checkout" />
-<!-- 			<package name="com.dee.url" /> -->
+ 			<package name="com.dee.url" />
 		</packages>
 	</test>
 
@@ -55,7 +55,7 @@
 		<packages>
 			<package name="user" />
 			<package name="checkout" />
-<!-- 			<package name="com.dee.url" /> -->
+ 			<package name="com.dee.url" />
 		</packages>
 	</test>
 </suite>
