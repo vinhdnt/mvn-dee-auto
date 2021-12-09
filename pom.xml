@@ -23,6 +23,7 @@
         <jackson.version>2.9.4</jackson.version>
         <webdrivermanager.version>4.4.3</webdrivermanager.version>
         <aspectj.version>1.8.10</aspectj.version>
+        <testXmlFile>runSmokeTestAllTenants.xml</testXmlFile>
     </properties>
 
     <!-- lib-->
@@ -150,7 +151,7 @@
                 <configuration>
                     <!-- Run TestNG xml file -->
                     <suiteXmlFiles>
-                        <file>src/test/resources/runTestcasesClass.xml</file>
+                        <file>src/test/resources/${testXmlFile}</file>
                     </suiteXmlFiles>
 
                     <!-- Argument -->

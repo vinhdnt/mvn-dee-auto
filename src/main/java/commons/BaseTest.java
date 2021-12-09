@@ -66,7 +66,7 @@ public class BaseTest {
         new RuntimeException("Pls input browser name");
         break;
     }
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     driver.manage().window().maximize();
     driver.get(appUrl);
     return driver;
