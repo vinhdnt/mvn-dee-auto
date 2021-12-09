@@ -113,8 +113,10 @@ public class ProductDetailPageObject extends BasePage {
 	}
 
 	public void closeCartSlideLayer() {
-		waitForElementClickable(driver, BasePageUI.CLOSE_CART_SLIDE_BUTTON);
-		clickOnElement(driver, BasePageUI.CLOSE_CART_SLIDE_BUTTON);
+		sleepInSecond(2);
+		if (isElementDisplayed(driver, BasePageUI.MINI_CART_SLIDE)) {
+			clickOnElement(driver, BasePageUI.CLOSE_CART_SLIDE_BUTTON);
+		}
 	}
 
 	public CheckOutPageObject clickOnGoToCartButton() {

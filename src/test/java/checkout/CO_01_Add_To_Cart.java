@@ -161,9 +161,10 @@ public class CO_01_Add_To_Cart extends BaseTest {
 		
 		log.info("TC_03_Add_To_Cart_At_PDP - Step 13: Verify 'product-added's price'");
 		verifyEquals(productPrice, productAddedPrice);
-		
-		sleepInSecond(5);
-		
+
+		log.info("TC_03_Add_To_Cart_At_PDP - Step 14: Close cart 'Slide layer'");
+		productDetailPage.closeCartSlideLayer();
+
 		log.info("TC_03_Add_To_Cart_At_PDP - Step 15: Verify 'cart slide layer' is undisplayed");
 		verifyTrue(productDetailPage.isCartSlideLayerUndisplayed());		
 		

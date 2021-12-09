@@ -119,9 +119,7 @@ public class User_01_Register_Login extends BaseTest {
 		
 		log.info("TC_03_Login_With_Valid_User_Name_Password - Step 6: Verify 'User's full name'");
 		verifyEquals(myAccountPage.getUserFullNameGreeting(), firstName + " " + lastName);
-		
-		log.info("TC_03_Login_With_Valid_User_Name_Password - Step 7: Get all 'Cookies logged-in'");
-		loginPageCookies = loginPage.getAllCookies(driver);
+
 
 	}
 

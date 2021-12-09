@@ -13,7 +13,7 @@
 		<classes>
 			<!--<class name="user.User_01_Register_Login" />-->
  			<class name="checkout.CO_01_Add_To_Cart" />
- 			<class name="checkout.CO_02_Check_Out_Main_Flow" />
+ 			<!--<class name="checkout.CO_02_Check_Out_Main_Flow" />-->
 			<!-- <class name="com.dee.url.Check_Broken_URL" /> -->
 		</classes>
 	</test>
