@@ -7,12 +7,11 @@
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 		<listener class-name="commons.MethodListener" />
 	</listeners>
-	<test name="Test on CH_de">
-		<parameter name="url" value="https://www.deerberg.ch/de" />
-		<parameter name="browser" value="chrome" />
+	<test name="Test case">
+		<parameter name="url" value="https://www.deerberg.nl/nl" />
 		<classes>
-			<!--<class name="user.User_01_Register_Login" />-->
- 			<class name="checkout.CO_01_Add_To_Cart" />
+			<class name="user.User_01_Register_Login" />
+ 			<!--<class name="checkout.CO_01_Add_To_Cart" />-->
  			<!--<class name="checkout.CO_02_Check_Out_Main_Flow" />-->
 			<!-- <class name="com.dee.url.Check_Broken_URL" /> -->
 		</classes>
