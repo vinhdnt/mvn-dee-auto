@@ -37,11 +37,11 @@ public class CO_01_Add_To_Cart extends BaseTest {
 		log.info("TC_01_Add_To_Cart_At_PDL - Step 4: Click on accept 'Cookie Consent'");
 		homePage.clickOnAcceptCookieConsentButton();
 
-		log.info("TC_01_Add_To_Cart_At_PDL - Step 5: Click on '2nd-category' on 'Top Category'");
-		productListPage = homePage.clickOnCategoryHeaderByIndex("2");
+		log.info("TC_01_Add_To_Cart_At_PDL - Step 5: Check and close 'promo-layer'");
+		homePage.checkAndClosePromoLayer(driver);
 
-		log.info("TC_01_Add_To_Cart_At_PDL - Step 6: Check and close 'promo-layer'"); 
-		productListPage.checkAndClosePromoLayer(driver);
+		log.info("TC_01_Add_To_Cart_At_PDL - Step 6: Click on '2nd-category' on 'Top Category'");
+		productListPage = homePage.clickOnCategoryHeaderByIndex("2");
 		
 		log.info("TC_01_Add_To_Cart_At_PDL - Step 7: Verify 'product list' are displayed"); 
 		verifyTrue(productListPage.isProductsListDisplayed());

@@ -43,11 +43,11 @@ public class CO_02_Check_Out_Main_Flow extends BaseTest {
 		log.info("TC_01_Check_Out_As_New_Register_User - Step 2: Click on accept 'Cookie Consent'");
 		homePage.clickOnAcceptCookieConsentButton();
 
-		log.info("TC_01_Check_Out_As_New_Register_User - Step 3: Click on 'second-category'");
+		log.info("TC_01_Check_Out_As_New_Register_User - Step 3: Check and close 'promo layer'");
+		homePage.checkAndClosePromoLayer(driver);
+
+		log.info("TC_01_Check_Out_As_New_Register_User - Step 4: Click on 'second-category'");
 		productListPage = homePage.clickOnCategoryHeaderByIndex("2");
-		
-		log.info("TC_01_Check_Out_As_New_Register_User - Step 4: Check and close 'promo layer'");
-		productListPage.checkAndClosePromoLayer(driver);
 		
 		log.info("TC_01_Check_Out_As_New_Register_User - Step 5: Click on 'first-product-name'");
 		productDetailPage = productListPage.clickOnProductName("1");
@@ -125,12 +125,12 @@ public class CO_02_Check_Out_Main_Flow extends BaseTest {
 	public void TC_02_Check_Out_As_Guest_User() {
 		log.info("TC_02_Check_Out_As_Guest_User - Step 2: Click on accept 'Cookie Consent'");
 		homePage.clickOnAcceptCookieConsentButton();
-		
-		log.info("TC_02_Check_Out_As_Guest_User - Step 3: Click on 'second-category'");
+
+		log.info("TC_02_Check_Out_As_Guest_User - Step 3: Check and close 'promo layer'");
+		homePage.checkAndClosePromoLayer(driver);
+
+		log.info("TC_02_Check_Out_As_Guest_User - Step 4: Click on 'second-category'");
 		productListPage = homePage.clickOnCategoryHeaderByIndex("2");
-		
-		log.info("TC_02_Check_Out_As_Guest_User - Step 4: Check and close 'promo layer'");
-		productListPage.checkAndClosePromoLayer(driver);
 		
 		log.info("TC_02_Check_Out_As_Guest_User - Step 5: Click on 'second-product-name'");
 		productDetailPage = productListPage.clickOnProductName("2");
@@ -205,11 +205,11 @@ public class CO_02_Check_Out_Main_Flow extends BaseTest {
 		log.info("TC_03_Check_Out_As_User_Log_In_At_Step_2 - Step 2: Click on accept 'Cookie Consent'");
 		homePage.clickOnAcceptCookieConsentButton();
 
-		log.info("TC_03_Check_Out_As_User_Log_In_At_Step_2 - Step 3: Click on 'second-category'");
+		log.info("TC_03_Check_Out_As_User_Log_In_At_Step_2 - Step 3: Check and close 'promo layer'");
+		homePage.checkAndClosePromoLayer(driver);
+
+		log.info("TC_03_Check_Out_As_User_Log_In_At_Step_2 - Step 4: Click on 'second-category'");
 		productListPage = homePage.clickOnCategoryHeaderByIndex("2");
-		
-		log.info("TC_03_Check_Out_As_User_Log_In_At_Step_2 - Step 4: Check and close 'promo layer'");
-		productListPage.checkAndClosePromoLayer(driver);
 		
 		log.info("TC_03_Check_Out_As_User_Log_In_At_Step_2 - Step 5: Click on 'third-product-name'");
 		productDetailPage = productListPage.clickOnProductName("3");
