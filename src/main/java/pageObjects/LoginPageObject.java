@@ -14,7 +14,7 @@ public class LoginPageObject extends BasePage {
 	}
 
 	public RegisterPageObject clickOnRegisterButton() {
-		waitForElementClickable(driver, LoginPageUI.REGISTER_BUTTON);
+		waitForElementVisible(driver, LoginPageUI.REGISTER_BUTTON);
 		clickOnElement(driver, LoginPageUI.REGISTER_BUTTON);
 		return PageGeneratorManager.getRegisterPage(driver);
 	}
