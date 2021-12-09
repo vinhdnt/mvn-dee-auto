@@ -93,7 +93,7 @@ public class CO_01_Add_To_Cart extends BaseTest {
 		log.info("TC_01_Add_To_Cart_At_PDL - Step 22: Verify 'product price' on icon basket header ");
 		verifyEquals(productPrice, productListPage.getProductPriceOnIconBasket());
 		
-		log.info("TC_01_Add_To_Cart_At_PDL - Step 22: Verify 'product count' on icon basket header is 1 ");
+		log.info("TC_01_Add_To_Cart_At_PDL - Step 23: Verify 'product count' on icon basket header is 1 ");
 		verifyEquals(productListPage.getCartItemCount(), "1");
 	}
 	
@@ -160,12 +160,9 @@ public class CO_01_Add_To_Cart extends BaseTest {
 		verifyEquals(productSize, productAddedSize);
 		
 		log.info("TC_03_Add_To_Cart_At_PDP - Step 13: Verify 'product-added's price'");
-		verifyEquals(productPrice, productAddedPrice);		
+		verifyEquals(productPrice, productAddedPrice);
 		
-		sleepInSecond(2);
-		
-		log.info("TC_03_Add_To_Cart_At_PDP - Step 14: Click on close 'icon cart slide layer'");
-		productDetailPage.closeCartSlideLayer();		
+		sleepInSecond(5);
 		
 		log.info("TC_03_Add_To_Cart_At_PDP - Step 15: Verify 'cart slide layer' is undisplayed");
 		verifyTrue(productDetailPage.isCartSlideLayerUndisplayed());		

@@ -484,8 +484,8 @@ public class BasePage {
 	}
 
 	public void checkAndClosePromoLayer(WebDriver driver) {
+		sleepInSecond(2);
 		overrideGlobalTimeOut(driver, shortTimeOut);
-		sleepInSecond(5);
 		List<WebElement> elements = getElements(driver, BasePageUI.PROMO_LAYER);
 		overrideGlobalTimeOut(driver, longTimeOut);
 		System.out.println(elements.size());

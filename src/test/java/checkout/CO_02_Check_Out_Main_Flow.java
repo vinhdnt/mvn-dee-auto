@@ -20,7 +20,7 @@ public class CO_02_Check_Out_Main_Flow extends BaseTest {
 	BasePage basepage;
 	private String email, password, firstName, lastName, streetInvoiceAddress, houseNumberInvoiceAddress, cityInvoiceAddress, paymentMethodSelected;
 	private String emailLogin;
-	private String zipCode[][] = {{"de", "12345"}, { "at", "1234"}, { "ch", "1234"}, { "fr", "1234"}, { "nl", "1234"}};
+	private String zipCode[][] = {{"de", "12345"}, { "at", "1234"}, { "ch", "1235"}, { "fr", "1235"}, { "nl", "1234"}};
 	
 	
 	@Parameters({ "browser", "url" })

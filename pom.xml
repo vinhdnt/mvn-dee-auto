@@ -23,7 +23,7 @@
         <jackson.version>2.9.4</jackson.version>
         <webdrivermanager.version>4.4.3</webdrivermanager.version>
         <aspectj.version>1.8.10</aspectj.version>
-        <testXmlFile>runSmokeTestAllTenants.xml</testXmlFile>
+        <testXmlFile>runTestCasesClass.xml</testXmlFile>
     </properties>
 
     <!-- lib-->
