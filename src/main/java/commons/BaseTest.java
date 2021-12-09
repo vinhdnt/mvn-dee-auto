@@ -8,7 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -42,7 +44,6 @@ public class BaseTest {
     protected WebDriver getBrowserDriver(String browserName, String appUrl) {
         BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
         String hubUrl = System.getProperty("browserUrl");
-        browserName = System.getProperty("browser");
         if (StringUtils.isNotEmpty(hubUrl)) {
             browser = BROWSER.REMOTE;
         }
@@ -61,12 +62,30 @@ public class BaseTest {
                 break;
             case REMOTE:
                 WebDriverManager.seleniumServerStandalone().setup();
-                ChromeOptions capabilities = new ChromeOptions();
-                try {
-                    driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                    log.error("Error: " + e.getMessage());
+                if (hubUrl.contains("4444")) {
+                    ChromeOptions capabilities = new ChromeOptions();
+                    try {
+                        driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                        log.error("Error: " + e.getMessage());
+                    }
+                } else if (hubUrl.contains("4445")){
+                    FirefoxOptions capabilities = new FirefoxOptions();
+                    try {
+                        driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                        log.error("Error: " + e.getMessage());
+                    }
+                } else if (hubUrl.contains("4446")) {
+                    EdgeOptions capabilities = new EdgeOptions();
+                    try {
+                        driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                        log.error("Error: " + e.getMessage());
+                    }
                 }
             default:
                 new RuntimeException("Pls input browser name");
