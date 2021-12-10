@@ -37,13 +37,13 @@ public class Check_Broken_URL extends BaseTest {
 		
 		log.info("TC_01_Check_Broken_URL - Step 3: Open each link to verify");
 		brokenLink = homePage.getBrokenLink(allLink);
-		
+
 		log.info("TC_01_Check_Broken_URL - Step 4: Verify have broken link or not");
 		verifyTrue(brokenLink.isEmpty());
 		
 		for (String i : brokenLink) {
 			log.info(i);
-		}		
+		}
 	}
 	
 	@AfterMethod

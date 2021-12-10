@@ -48,11 +48,14 @@ public class User_01_Register_Login extends BaseTest {
 		log.info("TC_01_Register_With_Valid_User_Name_Password - Step 4: Click on 'accept Cookie Consent' button");
 		homePage.clickOnAcceptCookieConsentButton();
 
-		log.info("TC_01_Register_With_Valid_User_Name_Password - Step 5: Check and close 'promo layer'");
+		log.info("TC_01_Register_With_Valid_User_Name_Password - Check and close 'promo layer'");
 		homePage.checkAndClosePromoLayer(driver);
 
 		log.info("TC_01_Register_With_Valid_User_Name_Password - Step 6: Click on 'My account' on header");
 		loginPage = homePage.clickOnMyAccountOnHeader(driver);
+
+		log.info("TC_01_Register_With_Valid_User_Name_Password - Check and close 'promo layer'");
+		loginPage.checkAndClosePromoLayer(driver);
 
 		log.info("TC_01_Register_With_Valid_User_Name_Password - Step 7: Click on 'Register' button");
 		registerPage = loginPage.clickOnRegisterButton();

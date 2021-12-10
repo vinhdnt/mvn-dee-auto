@@ -23,7 +23,7 @@
         <jackson.version>2.9.4</jackson.version>
         <webdrivermanager.version>4.4.3</webdrivermanager.version>
         <aspectj.version>1.8.10</aspectj.version>
-        <testXmlFile>runTestCasesClass.xml</testXmlFile>
+        <testXmlFile>TestCasesClass</testXmlFile>
         <browser>chrome</browser>
     </properties>
 
@@ -155,7 +155,7 @@
                     </systemPropertyVariables>
                     <!-- Run TestNG xml file -->
                     <suiteXmlFiles>
-                        <file>src/test/resources/${testXmlFile}</file>
+                        <file>src/test/resources/run${testXmlFile}.xml</file>
                     </suiteXmlFiles>
 
                     <!-- Argument -->

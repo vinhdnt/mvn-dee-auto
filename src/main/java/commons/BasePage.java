@@ -484,7 +484,6 @@ public class BasePage {
 	}
 
 	public void checkAndClosePromoLayer(WebDriver driver) {
-		sleepInSecond(2);
 		overrideGlobalTimeOut(driver, shortTimeOut);
 		List<WebElement> elements = getElements(driver, BasePageUI.PROMO_LAYER);
 		overrideGlobalTimeOut(driver, longTimeOut);
@@ -540,7 +539,7 @@ public class BasePage {
 	private Select select;
 	private Actions action;
 	private long longTimeOut = 60;
-	private long shortTimeOut = 30;
+	private long shortTimeOut = 20;
 	private WebDriverWait explicitWait;
 	private JavascriptExecutor jsExecutor;
 	private FluentWait<WebDriver> fluentDriver;

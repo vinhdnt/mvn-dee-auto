@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Smoke Test CH-fr" parallel="fail" thread-count="1">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="commons.MethodListener" />
+	</listeners>
+
+	<test name="Test on CH_fr">
+		<parameter name="url" value="https://www.deerberg.ch/fr" />
+		<packages>
+			<package name="user" />
+			<package name="checkout" />
+ 			<package name="url" />
+		</packages>
+	</test>
+
+</suite>
