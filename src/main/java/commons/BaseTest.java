@@ -32,22 +32,25 @@ public class BaseTest {
     private enum BROWSER {
         CHROME,
         FIREFOX,
-        IE,
-        SAFARI,
-        EDGE_LEGACY,
         EDGE_CHROMIUM,
-        H_CHROME,
-        H_FIREFOX,
-        REMOTE
+        REMOTE_CHROME,
+        REMOTE_FIREFOX,
+        REMOTE_EDGE
     }
 
     protected WebDriver getBrowserDriver(String browserName, String appUrl) {
         BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
-        String hubUrl = System.getProperty("browserUrl");
-        if (StringUtils.isNotEmpty(hubUrl)) {
-            browser = BROWSER.REMOTE;
+        if (browserName.contains("4444")) {
+            System.setProperty(browserName,"REMOTE_CHROME");
+            browser = BROWSER.REMOTE_CHROME;
+        } else if (browserName.contains("4445")) {
+            System.setProperty(browserName,"REMOTE_FIREFOX");
+            browser = BROWSER.REMOTE_FIREFOX;
+        } else if (browserName.contains("4446")) {
+            System.setProperty(browserName,"REMOTE_EDGE");
+            browser = BROWSER.REMOTE_EDGE;
         }
-        switch (browser) {
+        /*switch (browser) {
             case FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
@@ -60,37 +63,76 @@ public class BaseTest {
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
                 break;
-            case REMOTE:
+            case REMOTE_CHROME:
                 WebDriverManager.seleniumServerStandalone().setup();
-                if (hubUrl.contains("4444")) {
-                    ChromeOptions capabilities = new ChromeOptions();
-                    try {
-                        driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
-                    } catch (MalformedURLException e) {
-                        e.printStackTrace();
-                        log.error("Error: " + e.getMessage());
-                    }
-                } else if (hubUrl.contains("4445")){
-                    FirefoxOptions capabilities = new FirefoxOptions();
-                    try {
-                        driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
-                    } catch (MalformedURLException e) {
-                        e.printStackTrace();
-                        log.error("Error: " + e.getMessage());
-                    }
-                } else if (hubUrl.contains("4446")) {
-                    EdgeOptions capabilities = new EdgeOptions();
-                    try {
-                        driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
-                    } catch (MalformedURLException e) {
-                        e.printStackTrace();
-                        log.error("Error: " + e.getMessage());
-                    }
+                ChromeOptions capabilities = new ChromeOptions();
+                try {
+                    driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                    log.error("Error: " + e.getMessage());
+                }
+            case REMOTE_FIREFOX:
+                WebDriverManager.seleniumServerStandalone().setup();
+                FirefoxOptions capabilities = new FirefoxOptions();
+                try {
+                    driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                    log.error("Error: " + e.getMessage());
+                }
+            case REMOTE_EDGE:
+                WebDriverManager.seleniumServerStandalone().setup();
+                EdgeOptions capabilities = new EdgeOptions();
+                try {
+                    driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                    log.error("Error: " + e.getMessage());
                 }
             default:
                 new RuntimeException("Pls input browser name");
                 break;
+        }*/
+
+        if (browser == BROWSER.CHROME) {
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+        } else if (browser == BROWSER.FIREFOX){
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
+        } else if (browser == BROWSER.EDGE_CHROMIUM){
+            WebDriverManager.edgedriver().setup();
+            driver = new EdgeDriver();
+        } else if (browser == BROWSER.REMOTE_CHROME){
+            WebDriverManager.seleniumServerStandalone().setup();
+            ChromeOptions capabilities = new ChromeOptions();
+            try {
+                driver = new RemoteWebDriver(new URL(browserName), capabilities);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+                log.error("Error: " + e.getMessage());
+            }
+        } else if (browser == BROWSER.REMOTE_FIREFOX){
+            WebDriverManager.seleniumServerStandalone().setup();
+            FirefoxOptions capabilities = new FirefoxOptions();
+            try {
+                driver = new RemoteWebDriver(new URL(browserName), capabilities);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+                log.error("Error: " + e.getMessage());
+            }
+        } else if (browser == BROWSER.REMOTE_EDGE){
+            WebDriverManager.seleniumServerStandalone().setup();
+            EdgeOptions capabilities = new EdgeOptions();
+            try {
+                driver = new RemoteWebDriver(new URL(browserName), capabilities);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+                log.error("Error: " + e.getMessage());
+            }
         }
+
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(appUrl);
