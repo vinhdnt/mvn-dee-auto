@@ -41,13 +41,10 @@ public class BaseTest {
     protected WebDriver getBrowserDriver(String browserName, String appUrl) {
         BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
         if (browserName.contains("4444")) {
-            System.setProperty(browserName,"REMOTE_CHROME");
             browser = BROWSER.REMOTE_CHROME;
         } else if (browserName.contains("4445")) {
-            System.setProperty(browserName,"REMOTE_FIREFOX");
             browser = BROWSER.REMOTE_FIREFOX;
         } else if (browserName.contains("4446")) {
-            System.setProperty(browserName,"REMOTE_EDGE");
             browser = BROWSER.REMOTE_EDGE;
         }
         /*switch (browser) {
