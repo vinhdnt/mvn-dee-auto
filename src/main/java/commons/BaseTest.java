@@ -24,6 +24,7 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
     private WebDriver driver;
     protected final Log log;
+    private String browserRemoteUrl;
 
     protected BaseTest() {
         log = LogFactory.getLog(getClass());
@@ -39,14 +40,18 @@ public class BaseTest {
     }
 
     protected WebDriver getBrowserDriver(String browserName, String appUrl) {
-        BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
         if (browserName.contains("4444")) {
-            browser = BROWSER.REMOTE_CHROME;
+            browserRemoteUrl = browserName;
+            browserName = BROWSER.REMOTE_CHROME.toString();
         } else if (browserName.contains("4445")) {
-            browser = BROWSER.REMOTE_FIREFOX;
+            browserRemoteUrl = browserName;
+            browserName = BROWSER.REMOTE_FIREFOX.toString();
         } else if (browserName.contains("4446")) {
-            browser = BROWSER.REMOTE_EDGE;
+            browserRemoteUrl = browserName;
+            browserName = BROWSER.REMOTE_EDGE.toString();
         }
+        BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
+
         /*switch (browser) {
             case FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
@@ -105,7 +110,7 @@ public class BaseTest {
             WebDriverManager.seleniumServerStandalone().setup();
             ChromeOptions capabilities = new ChromeOptions();
             try {
-                driver = new RemoteWebDriver(new URL(browserName), capabilities);
+                driver = new RemoteWebDriver(new URL(browserRemoteUrl), capabilities);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
                 log.error("Error: " + e.getMessage());
@@ -114,7 +119,7 @@ public class BaseTest {
             WebDriverManager.seleniumServerStandalone().setup();
             FirefoxOptions capabilities = new FirefoxOptions();
             try {
-                driver = new RemoteWebDriver(new URL(browserName), capabilities);
+                driver = new RemoteWebDriver(new URL(browserRemoteUrl), capabilities);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
                 log.error("Error: " + e.getMessage());
@@ -123,7 +128,7 @@ public class BaseTest {
             WebDriverManager.seleniumServerStandalone().setup();
             EdgeOptions capabilities = new EdgeOptions();
             try {
-                driver = new RemoteWebDriver(new URL(browserName), capabilities);
+                driver = new RemoteWebDriver(new URL(browserRemoteUrl), capabilities);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
                 log.error("Error: " + e.getMessage());
