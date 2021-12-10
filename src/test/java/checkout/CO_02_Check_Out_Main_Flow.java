@@ -26,8 +26,9 @@ public class CO_02_Check_Out_Main_Flow extends BaseTest {
 	@Parameters({ "browser", "url" })
 	@BeforeMethod
 	public void initBrowser(String browserName, String url) {
-		log.info("Pre-condition - Step 01:Init browser '" + browserName +"' And go to Homepage to: " + url);
+		log.info("Pre-condition - Step 01:Init browser and go to Homepage to: " + url);
 		driver = getBrowserDriver(browserName, url);
+		log.info("Browser name and version is: " + getBrowserInitName());
 		homePage = PageGeneratorManager.getHomePage(driver);
 		email = getRandomEmail();
 		password = "123123123";

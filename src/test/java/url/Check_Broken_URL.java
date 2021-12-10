@@ -22,8 +22,9 @@ public class Check_Broken_URL extends BaseTest {
 	@Parameters({ "browser", "url" })
 	@BeforeMethod
 	public void initBrowser(String browserName, String url) {
-		log.info("Pre-condition - Step 01:Init browser '" + browserName +"' And go to Homepage to: " + url);
+		log.info("Pre-condition - Step 01:Init browser and go to Homepage to: " + url);
 		driver = getBrowserDriver(browserName, url);
+		log.info("Browser name and version is: " + getBrowserInitName());
 		homePage = PageGeneratorManager.getHomePage(driver);
 	}
 	

@@ -4,6 +4,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -50,52 +52,8 @@ public class BaseTest {
             browserRemoteUrl = browserName;
             browserName = BROWSER.REMOTE_EDGE.toString();
         }
-        BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
 
-        /*switch (browser) {
-            case FIREFOX:
-                WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
-                break;
-            case CHROME:
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
-                break;
-            case EDGE_CHROMIUM:
-                WebDriverManager.edgedriver().setup();
-                driver = new EdgeDriver();
-                break;
-            case REMOTE_CHROME:
-                WebDriverManager.seleniumServerStandalone().setup();
-                ChromeOptions capabilities = new ChromeOptions();
-                try {
-                    driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                    log.error("Error: " + e.getMessage());
-                }
-            case REMOTE_FIREFOX:
-                WebDriverManager.seleniumServerStandalone().setup();
-                FirefoxOptions capabilities = new FirefoxOptions();
-                try {
-                    driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                    log.error("Error: " + e.getMessage());
-                }
-            case REMOTE_EDGE:
-                WebDriverManager.seleniumServerStandalone().setup();
-                EdgeOptions capabilities = new EdgeOptions();
-                try {
-                    driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                    log.error("Error: " + e.getMessage());
-                }
-            default:
-                new RuntimeException("Pls input browser name");
-                break;
-        }*/
+        BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
 
         if (browser == BROWSER.CHROME) {
             WebDriverManager.chromedriver().setup();
@@ -140,6 +98,13 @@ public class BaseTest {
         driver.get(appUrl);
         return driver;
     }
+
+    public String getBrowserInitName(){
+        Capabilities cap = ((RemoteWebDriver) driver).getCapabilities();
+        return cap.getBrowserName() + " " +  cap.getVersion();
+    }
+
+
 
     public void sleepInSecond(long timeoutInSecond) {
         try {

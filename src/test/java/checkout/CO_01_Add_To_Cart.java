@@ -12,6 +12,8 @@ import commons.PageGeneratorManager;
 import pageObjects.HomePageObject;
 import pageObjects.ProductDetailPageObject;
 import pageObjects.ProductListPageObject;
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class CO_01_Add_To_Cart extends BaseTest {
 	WebDriver driver;
@@ -22,8 +24,9 @@ public class CO_01_Add_To_Cart extends BaseTest {
 	@Parameters({ "browser", "url" })
 	@BeforeClass
 	public void initBrowser(String browserName, String url) {
-		log.info("Pre-condition - Step 01:Init browser '" + browserName +"' And go to Homepage to: " + url);
+		log.info("Pre-condition - Step 01:Init browser and go to Homepage to: " + url);
 		driver = getBrowserDriver(browserName, url);
+		log.info("Browser name and version is: " + getBrowserInitName());
 		homePage = PageGeneratorManager.getHomePage(driver);
 	}
 	@Test

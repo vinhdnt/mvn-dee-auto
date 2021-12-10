@@ -24,12 +24,12 @@ public class User_01_Register_Login extends BaseTest {
 	WebDriver driver;
 	BasePage basepage;
 	private String email, password, firstName, lastName;
-	public static Set<Cookie> loginPageCookies;
 	@Parameters({ "browser", "url" })
 	@BeforeClass
 	public void initBrowser(String browserName, String url) {
-		log.info("Pre-condition - Step 01:Init browser '" + browserName +"' And go to Homepage to: " + url);
+		log.info("Pre-condition - Step 01:Init browser and go to Homepage to: " + url);
 		driver = getBrowserDriver(browserName, url);
+		log.info("Browser name and version is: " + getBrowserInitName());
 		homePage = PageGeneratorManager.getHomePage(driver);
 		email = getRandomEmail();
 		password = "123123123";
