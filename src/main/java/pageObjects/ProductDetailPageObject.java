@@ -113,7 +113,7 @@ public class ProductDetailPageObject extends BasePage {
 	}
 
 	public void closeCartSlideLayer() {
-		sleepInSecond(2);
+		sleepInSecond(3);
 		if (isElementDisplayed(driver, BasePageUI.MINI_CART_SLIDE)) {
 			clickOnElement(driver, BasePageUI.CLOSE_CART_SLIDE_BUTTON);
 		}

@@ -123,8 +123,10 @@ public class BaseTest {
             return "ch";
         } else if (driver.getCurrentUrl().contains(".ch/fr")) {
             return "fr";
-        } else {
+        } else if (driver.getCurrentUrl().contains(".nl/nl")){
             return "nl";
+        }else{
+            return  "be";
         }
     }
 

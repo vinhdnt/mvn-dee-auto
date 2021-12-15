@@ -209,7 +209,7 @@ public class BasePage {
 		for (WebElement item : allItems) {
 			if (item.getText().trim().equals(expectedItem)) {
 				jsExecutor = (JavascriptExecutor) driver;
-				jsExecutor.executeScript("arguments[0].scrollIntoView(true);", item);
+				jsExecutor.executeScript("arguments[0].scrollIntoView({block: 'center'});", item);
 				sleepInSecond(1);
 				item.click();
 				sleepInSecond(1);
@@ -222,6 +222,9 @@ public class BasePage {
 		getElement(driver, parentLocator).click();
 		sleepInSecond(1);
 		List<WebElement> allItems = explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByXpath(childItemLocator)));
+		sleepInSecond(1);
+		jsExecutor = (JavascriptExecutor) driver;
+		jsExecutor.executeScript("arguments[0].scrollIntoView({block: 'center'});", allItems.get(index));
 		sleepInSecond(1);
 		allItems.get(index).click();
 	}
@@ -373,7 +376,7 @@ public class BasePage {
 
 	public void scrollToElement(WebDriver driver, String locator) {
 		jsExecutor = (JavascriptExecutor) driver;
-		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", getElement(driver, locator));
+		jsExecutor.executeScript("arguments[0].scrollIntoView({block: 'center'});", getElement(driver, locator));
 	}
 
 	public void sendkeyToElementByJS(WebDriver driver, String locator, String value) {
@@ -503,8 +506,10 @@ public class BasePage {
 			return "ch";
 		} else if (getPageUrl(driver).contains(".ch/fr")) {
 			return "fr";
-		} else {
+		} else if (getPageUrl(driver).contains(".nl/nl")) {
 			return "nl";
+		}else {
+			return "be";
 		}
 	}
 

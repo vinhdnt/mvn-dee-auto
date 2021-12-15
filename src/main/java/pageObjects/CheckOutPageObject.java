@@ -87,6 +87,9 @@ public class CheckOutPageObject extends BasePage {
 		case "nl":
 			sendKeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_ZIPCODE_STEP_2_TEXTBOX, zipCode[4][1]);
 			break;
+		case "be":
+			sendKeyToElement(driver, CheckOutPageUI.INVOICE_ADDRESS_ZIPCODE_STEP_2_TEXTBOX, zipCode[5][1]);
+			break;
 		}
 	}
 

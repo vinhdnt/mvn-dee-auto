@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Smoke Test NL" parallel="fail" thread-count="1">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="commons.MethodListener" />
+	</listeners>
+
+	<test name="Test on BE_nl test">
+		<parameter name="url" value="https://test.deerberg.be/nl" />
+		<packages>
+			<package name="user" />
+			<package name="checkout" />
+ 			<package name="url" />
+		</packages>
+	</test>
+</suite>
