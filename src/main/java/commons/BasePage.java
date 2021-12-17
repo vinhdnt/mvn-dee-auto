@@ -261,6 +261,14 @@ public class BasePage {
 			return false;
 		}
 	}
+	public boolean isElementDisplayed(WebDriver driver, String locator, String... params) {
+		try {
+			return getElement(driver, getDynamicLocator(locator, params)).isDisplayed();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 
 	public boolean isElementUndisplayed(WebDriver driver, String locator) {
 		overrideGlobalTimeOut(driver, shortTimeOut);
@@ -543,8 +551,8 @@ public class BasePage {
 	private Alert alert;
 	private Select select;
 	private Actions action;
-	private long longTimeOut = 60;
-	private long shortTimeOut = 20;
+	protected long longTimeOut = 60;
+	protected long shortTimeOut = 20;
 	private WebDriverWait explicitWait;
 	private JavascriptExecutor jsExecutor;
 	private FluentWait<WebDriver> fluentDriver;

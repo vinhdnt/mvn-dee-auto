@@ -12,8 +12,6 @@ import commons.PageGeneratorManager;
 import pageObjects.HomePageObject;
 import pageObjects.ProductDetailPageObject;
 import pageObjects.ProductListPageObject;
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class CO_01_Add_To_Cart extends BaseTest {
 	WebDriver driver;
@@ -29,6 +27,7 @@ public class CO_01_Add_To_Cart extends BaseTest {
 		log.info("Browser name and version is: " + getBrowserInitName());
 		homePage = PageGeneratorManager.getHomePage(driver);
 	}
+
 	@Test
 	public void TC_01_Add_To_Cart_At_PDL() {
 		log.info("TC_01_Add_To_Cart_At_PDL - Step 2: Verify 'wordpress' is displayed");

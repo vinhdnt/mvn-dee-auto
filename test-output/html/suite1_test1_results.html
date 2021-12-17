@@ -3,147 +3,324 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - Test on DE_de</title>
+  <title>Test Results Report - Test case</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>Test on DE_de</h1>
+<h1>Test case</h1>
 <p>
-  Test duration: 143.436s
+  Test duration: 0.035s
 </p>
 
-
-
-
-
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">user.User_01_Register_Login</td>
+  <table class="resultsTable configTable">
+    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
+              <tr class="group">
+        <td colspan="3">checkout.CO_02_Check_Out_Main_Flow</td>
       </tr>
             
 <tr>
   <td class="method">
-                  TC_01_Register_With_Valid_User_Name_Password
+                  afterMethod
       </td>
   <td class="duration">
-    55.122s
+    0.015s
   </td>
   <td class="result">
         
     
             <div class="testOutput">
-                        [INFO ] [2021-12-08 16:41:12,862] TC_01_Register_With_Valid_User_Name_Password - Step 2: Verify &apos;Wordpress page home page&apos; is displayed<br/>
+                        [INFO ] [2021-12-16 14:29:25,012] Close browser<br/>
 <br />
-                                [INFO ] [2021-12-08 16:41:13,072]&nbsp; -------------------------- PASSED -------------------------- <br/>
+                                [INFO ] [2021-12-16 14:29:25,013] OS name = windows 10<br/>
 <br />
-                                [INFO ] [2021-12-08 16:41:13,076] TC_01_Register_With_Valid_User_Name_Password - Step 3: Verify &apos;Cookie consent&apos; is displayed<br/>
-<br />
-                                [INFO ] [2021-12-08 16:41:13,149]&nbsp; -------------------------- PASSED -------------------------- <br/>
-<br />
-                                [INFO ] [2021-12-08 16:41:13,149] TC_01_Register_With_Valid_User_Name_Password - Step 4: Click on &apos;accept Cookie Consent&apos; button<br/>
-<br />
-                                [INFO ] [2021-12-08 16:41:13,285] TC_01_Register_With_Valid_User_Name_Password - Step 5: Click on &apos;My account&apos; on header<br/>
-<br />
-                                [INFO ] [2021-12-08 16:41:16,274] TC_01_Register_With_Valid_User_Name_Password - Step 6: Check and close &apos;promo layer&apos;<br/>
-<br />
-                                [INFO ] [2021-12-08 16:41:50,602] TC_01_Register_With_Valid_User_Name_Password - Step 7: Click on &apos;Register&apos; button<br/>
-<br />
-                                [INFO ] [2021-12-08 16:41:54,446] TC_01_Register_With_Valid_User_Name_Password - Step 8: Select &apos;Gender&apos; dropdown<br/>
-<br />
-                                [INFO ] [2021-12-08 16:41:54,584] TC_01_Register_With_Valid_User_Name_Password - Step 9: Input &apos;First name&apos; textbox<br/>
-<br />
-                                [INFO ] [2021-12-08 16:41:54,744] TC_01_Register_With_Valid_User_Name_Password - Step 10: Input &apos;Last name&apos; textbox<br/>
-<br />
-                                [INFO ] [2021-12-08 16:41:54,916] TC_01_Register_With_Valid_User_Name_Password - Step 11: Input &apos;Email&apos; textbox: postmaster+de72685@deerberg.dev.mgm-tp.com<br/>
-<br />
-                                [INFO ] [2021-12-08 16:41:55,135] TC_01_Register_With_Valid_User_Name_Password - Step 12: Input &apos;Password&apos; textbox: 123123123<br/>
-<br />
-                                [INFO ] [2021-12-08 16:41:55,455] TC_01_Register_With_Valid_User_Name_Password - Step 13: Check on &apos;Comfirmation&apos; checkbox<br/>
-<br />
-                                [INFO ] [2021-12-08 16:41:55,513] TC_01_Register_With_Valid_User_Name_Password - Step 14: Click on &apos;Register submit&apos; button<br/>
-<br />
-                                [INFO ] [2021-12-08 16:41:55,638] TC_01_Register_With_Valid_User_Name_Password - Step 15: Verify &apos;Logout&apos; button on header is displayed<br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:07,591]&nbsp; -------------------------- PASSED -------------------------- <br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:07,591] TC_01_Register_With_Valid_User_Name_Password - Step 16: Verify &apos;Register success msg&apos; is displayed<br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:07,741]&nbsp; -------------------------- PASSED -------------------------- <br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:07,741] TC_01_Register_With_Valid_User_Name_Password - Step 17: Verify &apos;User&apos;s full name&apos;<br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:07,823]&nbsp; -------------------------- PASSED -------------------------- <br/>
+                                [INFO ] [2021-12-16 14:29:25,013] <br/>
 <br />
                   </div>
     
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.IllegalArgumentException: Empty command</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              java.base/java.lang.Runtime.exec(Runtime.java:407)<br />
+              java.base/java.lang.Runtime.exec(Runtime.java:310)<br />
+              commons.BaseTest.cleanBrowserAndDriver(BaseTest.java:241)<br />
+              checkout.CO_02_Check_Out_Main_Flow.afterMethod(CO_02_Check_Out_Main_Flow.java:269)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:566)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:536)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:648)<br />
+              org.testng.TestRunner.run(TestRunner.java:505)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:455)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:364)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1137)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1049)<br />
+              org.testng.TestNG.run(TestNG.java:1017)<br />
+              org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)<br />
+              org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterMethod
+      </td>
+  <td class="duration">
+    0.016s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        [INFO ] [2021-12-16 14:29:25,134] Close browser<br/>
+<br />
+                                [INFO ] [2021-12-16 14:29:25,135] OS name = windows 10<br/>
+<br />
+                                [INFO ] [2021-12-16 14:29:25,135] <br/>
+<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.IllegalArgumentException: Empty command</b></a><br />
+    <div class="stackTrace" id="exception-1">
+              java.base/java.lang.Runtime.exec(Runtime.java:407)<br />
+              java.base/java.lang.Runtime.exec(Runtime.java:310)<br />
+              commons.BaseTest.cleanBrowserAndDriver(BaseTest.java:241)<br />
+              checkout.CO_02_Check_Out_Main_Flow.afterMethod(CO_02_Check_Out_Main_Flow.java:269)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:566)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:536)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:648)<br />
+              org.testng.TestRunner.run(TestRunner.java:505)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:455)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:364)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1137)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1049)<br />
+              org.testng.TestNG.run(TestNG.java:1017)<br />
+              org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)<br />
+              org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterMethod
+      </td>
+  <td class="duration">
+    0.004s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        [INFO ] [2021-12-16 14:29:25,092] Close browser<br/>
+<br />
+                                [INFO ] [2021-12-16 14:29:25,095] OS name = windows 10<br/>
+<br />
+                                [INFO ] [2021-12-16 14:29:25,095] <br/>
+<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.IllegalArgumentException: Empty command</b></a><br />
+    <div class="stackTrace" id="exception-2">
+              java.base/java.lang.Runtime.exec(Runtime.java:407)<br />
+              java.base/java.lang.Runtime.exec(Runtime.java:310)<br />
+              commons.BaseTest.cleanBrowserAndDriver(BaseTest.java:241)<br />
+              checkout.CO_02_Check_Out_Main_Flow.afterMethod(CO_02_Check_Out_Main_Flow.java:269)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:566)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:536)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:648)<br />
+              org.testng.TestRunner.run(TestRunner.java:505)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:455)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:364)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1137)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1049)<br />
+              org.testng.TestNG.run(TestNG.java:1017)<br />
+              org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)<br />
+              org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  initBrowser
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse"><b>org.testng.TestNGException: <br/>
+Parameter &apos;browser&apos; is required by BeforeMethod on method initBrowser but has not been marked @Optional or defined<br/>
+in C:\Users\local_vtndoan\IdeaProjects\mvn-dee-auto\src\test\resources\runTestCasesClass.xml</b></a><br />
+    <div class="stackTrace" id="exception-3">
+              org.testng.internal.Parameters.createParams(Parameters.java:290)<br />
+              org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)<br />
+              org.testng.internal.Parameters.createParameters(Parameters.java:620)<br />
+              org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:523)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:648)<br />
+              org.testng.TestRunner.run(TestRunner.java:505)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:455)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:364)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1137)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1049)<br />
+              org.testng.TestNG.run(TestNG.java:1017)<br />
+              org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)<br />
+              org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)<br />
+                </div>
+      </td>
+</tr>
+    
+          <tr><td colspan="3">&nbsp;</td></tr>
+      <tr><td colspan="3" class="header skippedConfig">Skipped Configuration</td></tr>
+                    <tr>
+          <td colspan="3" class="group">checkout.CO_02_Check_Out_Main_Flow</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  initBrowser
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
 
       </td>
 </tr>
 <tr>
   <td class="method">
-                  TC_02_Logout
+                  initBrowser
       </td>
   <td class="duration">
-    33.588s
+    0.000s
   </td>
   <td class="result">
+                               
+    
         
+
+      </td>
+</tr>
+            </table>
+
+
+
+  <table class="resultsTable" width="100%">
+    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">checkout.CO_02_Check_Out_Main_Flow</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  TC_01_Check_Out_As_New_Register_User
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
     
-            <div class="testOutput">
-                        [INFO ] [2021-12-08 16:42:08,350] TC_02_Logout - Step 1: Click on &apos;Logout&apos; button on header<br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:11,802] TC_02_Logout - Step 2: Verify &apos;Wordpress page home page&apos; is displayed<br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:11,908]&nbsp; -------------------------- PASSED -------------------------- <br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:11,908] TC_02_Logout - Step 3: Verify &apos;Logout&apos; button on header is undisplayed<br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:41,933]&nbsp; -------------------------- PASSED -------------------------- <br/>
-<br />
-                  </div>
-    
+        
 
       </td>
 </tr>
 <tr>
   <td class="method">
-                  TC_03_Login_With_Valid_User_Name_Password
+                  TC_02_Check_Out_As_Guest_User
       </td>
   <td class="duration">
-    8.974s
+    0.000s
   </td>
   <td class="result">
+                               
+    
         
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  TC_03_Check_Out_As_User_Log_In_At_Step_2
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
     
-            <div class="testOutput">
-                        [INFO ] [2021-12-08 16:42:41,955] TC_03_Login_With_Valid_User_Name_Password - Step 1: Click on &apos;My account&apos; on header<br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:45,082] TC_03_Login_With_Valid_User_Name_Password - Step 2: Input &apos;Email&apos; textbox: postmaster+de72685@deerberg.dev.mgm-tp.com<br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:45,918] TC_03_Login_With_Valid_User_Name_Password - Step 3: Input &apos;Password&apos; textbox: 123123123<br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:46,298] TC_03_Login_With_Valid_User_Name_Password - Step 4: Click on &apos;Login&apos; submit button<br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:50,272] TC_03_Login_With_Valid_User_Name_Password - Step 5: Verify &apos;Logout&apos; button on header is displayed<br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:50,862]&nbsp; -------------------------- PASSED -------------------------- <br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:50,863] TC_03_Login_With_Valid_User_Name_Password - Step 6: Verify &apos;User&apos;s full name&apos;<br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:50,915]&nbsp; -------------------------- PASSED -------------------------- <br/>
-<br />
-                                [INFO ] [2021-12-08 16:42:50,915] TC_03_Login_With_Valid_User_Name_Password - Step 7: Get all &apos;Cookies logged-in&apos;<br/>
-<br />
-                  </div>
-    
+        
 
       </td>
 </tr>
       </table>
+
   
 </body>
 </html>

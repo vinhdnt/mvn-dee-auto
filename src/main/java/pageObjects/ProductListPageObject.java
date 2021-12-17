@@ -24,9 +24,10 @@ public class ProductListPageObject extends BasePage {
 	}
 
 	public boolean isDropdownSizeDisplayed() {
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-		if (getElementsSize(driver, ProductListPageUI.PRODUCT_SIZE_DROPDOWN) >= 1) {
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		overrideGlobalTimeOut(driver, shortTimeOut);
+		int dropdownSize = getElementsSize(driver, ProductListPageUI.PRODUCT_SIZE_DROPDOWN);
+		overrideGlobalTimeOut(driver, longTimeOut);
+		if (dropdownSize >= 1) {
 			return true;
 		} else {
 			return false;
@@ -145,4 +146,24 @@ public class ProductListPageObject extends BasePage {
 		return PageGeneratorManager.getProductDetailPage(driver);
 	}
 
+	public void clickOnWishListIconByIndex(String indexItem) {
+		waitForAllElementsVisible(driver, ProductListPageUI.DYNAMIC_WISH_LIST_ICON, indexItem);
+		clickOnElement(driver, ProductListPageUI.DYNAMIC_WISH_LIST_ICON, indexItem);
+	}
+
+	public boolean isWishListIconSelected(String indexItem) {
+		waitForElementVisible(driver, ProductListPageUI.DYNAMIC_WISH_LIST_SELECTED_ICON, indexItem);
+		return isElementDisplayed(driver, ProductListPageUI.DYNAMIC_WISH_LIST_SELECTED_ICON, indexItem);
+	}
+
+	public MyAccountPageObject clickOnWishListIconOnHeader() {
+		waitForElementVisible(driver, BasePageUI.WISH_LIST_ICON_HEADER);
+		clickOnElement(driver, BasePageUI.WISH_LIST_ICON_HEADER);
+		return PageGeneratorManager.getMyAccountPage(driver);
+	}
+
+	public boolean isAdd2WishListMsgDisplayed() {
+		waitForElementVisible(driver, ProductListPageUI.ADD2WISHLIST_MSG);
+		return isElementDisplayed(driver, ProductListPageUI.ADD2WISHLIST_MSG);
+	}
 }

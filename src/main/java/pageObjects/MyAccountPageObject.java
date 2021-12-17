@@ -15,7 +15,12 @@ public class MyAccountPageObject extends BasePage {
 		this.driver = driver;
 	}
 
-	public boolean isRegisterSuccessMsgDisplayed() {
+    public String getProductAddedWishListNameByIndex(String indexItem) {
+		waitForElementVisible(driver, MyAccountPageUI.DYNAMIC_PRODUCT_ADDED_NAME_IN_WISH_LIST , indexItem);
+		return getElementText(driver, MyAccountPageUI.DYNAMIC_PRODUCT_ADDED_NAME_IN_WISH_LIST , indexItem);
+    }
+
+    public boolean isRegisterSuccessMsgDisplayed() {
 		waitForElementVisible(driver, MyAccountPageUI.REGISTER_SUCCESS_MSG);
 		return isElementDisplayed(driver, MyAccountPageUI.REGISTER_SUCCESS_MSG);
 		

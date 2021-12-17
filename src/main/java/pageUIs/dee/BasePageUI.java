@@ -5,6 +5,7 @@ public class BasePageUI {
 	public static final String PROMO_LAYER = "//div[@data-wps-popup-content]";
 	public static final String PROMO_LAYER_CLOSE_BUTTON = "//div[@data-wps-popup-content]//div[@aria-label='close']";
 	public static final String MY_ACCOUNT_LINK_HEADER = "//a[@id='checkInNav']";
+	public static final String WISH_LIST_ICON_HEADER = "//a[@id='wishlist-icon']";
 	public static final String LOGOUT_LINK_HEADER = "//span[starts-with(@id,'logoutLink')]";
 	public static final String DYNAMIC_MAIN_CATEGORY_HEADER = "//li[contains(@class,'main-cat')][%s]//a[@class='main_catg_link']";
 	public static final String TOP_NAVIGATION = "//div[@id='topNavigation']//ul[@id='nav-md']";

@@ -17,9 +17,10 @@ public class ProductDetailPageObject extends BasePage {
 	}
 
 	public boolean isDropdownSizeDisplayed() {
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		if (getElementsSize(driver, ProductDetailPageUI.PRODUCT_ONE_SIZE) >  0) {
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		overrideGlobalTimeOut(driver, shortTimeOut);
+		int productOneSize = getElementsSize(driver, ProductDetailPageUI.PRODUCT_ONE_SIZE);
+		overrideGlobalTimeOut(driver, longTimeOut);
+		if (productOneSize >= 1) {
 			return false;
 		} else {
 			return true;

@@ -1,15 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test on DE_de"
-           tests="3"
-           failures="0"
+<testsuite name="Test case"
+           tests="9"
+           failures="4"
            errors="0"
-           skipped="0"
-           time="199.033">
+           skipped="5"
+           time="0.035">
   <properties />
+            <testcase name="afterMethod" time="0.004" classname="checkout.CO_02_Check_Out_Main_Flow">
+                <failure type="java.lang.IllegalArgumentException"
+                  message="Empty command"
+              >
+<![CDATA[java.lang.IllegalArgumentException: Empty command
+  java.base/java.lang.Runtime.exec(Runtime.java:407)
+  java.base/java.lang.Runtime.exec(Runtime.java:310)
+  commons.BaseTest.cleanBrowserAndDriver(BaseTest.java:241)
+  checkout.CO_02_Check_Out_Main_Flow.afterMethod(CO_02_Check_Out_Main_Flow.java:269)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.base/java.lang.reflect.Method.invoke(Method.java:566)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+  org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+  org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:536)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+  org.testng.TestRunner.privateRun(TestRunner.java:648)
+  org.testng.TestRunner.run(TestRunner.java:505)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+  org.testng.SuiteRunner.run(SuiteRunner.java:364)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+  org.testng.TestNG.runSuites(TestNG.java:1049)
+  org.testng.TestNG.run(TestNG.java:1017)
+  org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)
+  org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="afterMethod" time="0.015" classname="checkout.CO_02_Check_Out_Main_Flow">
+                <failure type="java.lang.IllegalArgumentException"
+                  message="Empty command"
+              >
+<![CDATA[java.lang.IllegalArgumentException: Empty command
+  java.base/java.lang.Runtime.exec(Runtime.java:407)
+  java.base/java.lang.Runtime.exec(Runtime.java:310)
+  commons.BaseTest.cleanBrowserAndDriver(BaseTest.java:241)
+  checkout.CO_02_Check_Out_Main_Flow.afterMethod(CO_02_Check_Out_Main_Flow.java:269)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.base/java.lang.reflect.Method.invoke(Method.java:566)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+  org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+  org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:536)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+  org.testng.TestRunner.privateRun(TestRunner.java:648)
+  org.testng.TestRunner.run(TestRunner.java:505)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+  org.testng.SuiteRunner.run(SuiteRunner.java:364)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+  org.testng.TestNG.runSuites(TestNG.java:1049)
+  org.testng.TestNG.run(TestNG.java:1017)
+  org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)
+  org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="initBrowser" time="0.000" classname="checkout.CO_02_Check_Out_Main_Flow">
+                <failure type="org.testng.TestNGException"
+                  message="
+Parameter &apos;browser&apos; is required by BeforeMethod on method initBrowser but has not been marked @Optional or defined
+in C:\Users\local_vtndoan\IdeaProjects\mvn-dee-auto\src\test\resources\runTestCasesClass.xml"
+              >
+<![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method initBrowser but has not been marked @Optional or defined
+in C:\Users\local_vtndoan\IdeaProjects\mvn-dee-auto\src\test\resources\runTestCasesClass.xml
+  org.testng.internal.Parameters.createParams(Parameters.java:290)
+  org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+  org.testng.internal.Parameters.createParameters(Parameters.java:620)
+  org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+  org.testng.TestRunner.privateRun(TestRunner.java:648)
+  org.testng.TestRunner.run(TestRunner.java:505)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+  org.testng.SuiteRunner.run(SuiteRunner.java:364)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+  org.testng.TestNG.runSuites(TestNG.java:1049)
+  org.testng.TestNG.run(TestNG.java:1017)
+  org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)
+  org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="afterMethod" time="0.016" classname="checkout.CO_02_Check_Out_Main_Flow">
+                <failure type="java.lang.IllegalArgumentException"
+                  message="Empty command"
+              >
+<![CDATA[java.lang.IllegalArgumentException: Empty command
+  java.base/java.lang.Runtime.exec(Runtime.java:407)
+  java.base/java.lang.Runtime.exec(Runtime.java:310)
+  commons.BaseTest.cleanBrowserAndDriver(BaseTest.java:241)
+  checkout.CO_02_Check_Out_Main_Flow.afterMethod(CO_02_Check_Out_Main_Flow.java:269)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.base/java.lang.reflect.Method.invoke(Method.java:566)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+  org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+  org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:536)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+  org.testng.TestRunner.privateRun(TestRunner.java:648)
+  org.testng.TestRunner.run(TestRunner.java:505)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+  org.testng.SuiteRunner.run(SuiteRunner.java:364)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+  org.testng.TestNG.runSuites(TestNG.java:1049)
+  org.testng.TestNG.run(TestNG.java:1017)
+  org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)
+  org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+]]>
+      </failure>
+
+          </testcase>
+  
+            <testcase name="initBrowser" time="0.0" classname="checkout.CO_02_Check_Out_Main_Flow">
+          <skipped />
+    </testcase>
+            <testcase name="initBrowser" time="0.0" classname="checkout.CO_02_Check_Out_Main_Flow">
+          <skipped />
+    </testcase>
+            <testcase name="TC_03_Check_Out_As_User_Log_In_At_Step_2" time="0.0" classname="checkout.CO_02_Check_Out_Main_Flow">
+          <skipped />
+    </testcase>
+            <testcase name="TC_01_Check_Out_As_New_Register_User" time="0.0" classname="checkout.CO_02_Check_Out_Main_Flow">
+          <skipped />
+    </testcase>
+            <testcase name="TC_02_Check_Out_As_Guest_User" time="0.0" classname="checkout.CO_02_Check_Out_Main_Flow">
+          <skipped />
+    </testcase>
   
   
-            <testcase name="TC_01_Check_Out_As_New_Register_User" time="85.480" classname="checkout.CO_02_Check_Out_Main_Flow" />
-                <testcase name="TC_02_Check_Out_As_Guest_User" time="53.610" classname="checkout.CO_02_Check_Out_Main_Flow" />
-                <testcase name="TC_03_Check_Out_As_User_Log_In_At_Step_2" time="59.943" classname="checkout.CO_02_Check_Out_Main_Flow" />
-      
 </testsuite>
