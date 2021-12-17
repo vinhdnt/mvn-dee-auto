@@ -57,7 +57,7 @@ public class User_02_Wish_List  extends BaseTest {
         log.info("TC_01_No_Login_Add_To_Wish_List_At_PDL - Step 9: Get '1st-product added wishlist's name'");
         productAddedName = myAccountPageObject.getProductAddedWishListNameByIndex("1");
 
-        log.info("TC_01_No_Login_Add_To_Wish_List_At_PDL - Step 7: Verify added-wishlist's name'");
+        log.info("TC_01_No_Login_Add_To_Wish_List_At_PDL - Step 10: Verify added-wishlist's name'");
         verifyTrue(productAddedName.contains(productName));
 
     }

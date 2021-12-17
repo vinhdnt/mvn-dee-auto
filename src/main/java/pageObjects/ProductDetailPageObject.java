@@ -18,12 +18,12 @@ public class ProductDetailPageObject extends BasePage {
 
 	public boolean isDropdownSizeDisplayed() {
 		overrideGlobalTimeOut(driver, shortTimeOut);
-		int productOneSize = getElementsSize(driver, ProductDetailPageUI.PRODUCT_ONE_SIZE);
+		int dropDownSize = getElementsSize(driver, ProductDetailPageUI.PRODUCT_SIZE_PARENT);
 		overrideGlobalTimeOut(driver, longTimeOut);
-		if (productOneSize >= 1) {
-			return false;
-		} else {
+		if (dropDownSize >= 1) {
 			return true;
+		} else {
+			return false;
 		}
 	}
 
