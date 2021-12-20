@@ -8,7 +8,7 @@
 		<listener class-name="commons.MethodListener" />
 	</listeners>
 	<test name="Test case">
-		<parameter name="url" value="https://test.deerberg.be/fr/" />
+		<parameter name="url" value="https://www.deerberg.nl/nl/" />
 		<classes>
 			<!--<class name="user.User_02_Wish_List" />-->
  			<!--<class name="checkout.CO_01_Add_To_Cart" />-->
@@ -16,4 +16,6 @@
 			 <class name="url.Check_Broken_URL_And_Empty_Category" />
 		</classes>
 	</test>
+
+
 </suite>
