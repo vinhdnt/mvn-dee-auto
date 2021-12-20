@@ -11,6 +11,8 @@ import commons.BasePage;
 import commons.PageGeneratorManager;
 import pageUIs.dee.BasePageUI;
 import pageUIs.dee.HomePageUI;
+import pageUIs.dee.ProductDetailPageUI;
+import pageUIs.dee.ProductListPageUI;
 
 public class HomePageObject extends BasePage {
 	private WebDriver driver;
@@ -61,21 +63,30 @@ public class HomePageObject extends BasePage {
 	}
 
 	public boolean isTopNavigationDisplayed() {
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		int topNavigationSize = getElementsSize(driver, BasePageUI.TOP_NAVIGATION);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		return (topNavigationSize >= 1);
 	}
 
+
 	public ArrayList<String> getBrokenLink(ArrayList<String> allLinks) {
 		ArrayList<String> brokenLinks = new ArrayList<String>();
+		ArrayList<String> emptyCategorys = new ArrayList<String>();
 		for (String getUrl : allLinks) {
 			driver.get(getUrl);
-			if (getPageUrl(driver).contains("?noCache") || !isTopNavigationDisplayed()) {
+			if (getPageUrl(driver).contains("?noCache") || !isTopNavigationDisplayed() || isCategoryEmpty()) {
 				brokenLinks.add(getUrl);
 			}
 		}
 		return brokenLinks;
+	}
+
+	public boolean isCategoryEmpty() {
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+		int nullItemSize = getElementsSize(driver, ProductListPageUI.NULL_PRODUCT_LIST);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		return (nullItemSize == 1);
 	}
 
 	public boolean isLogoutFieldOnHeaderDisplayed() {

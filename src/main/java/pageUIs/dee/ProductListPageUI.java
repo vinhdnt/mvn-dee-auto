@@ -2,6 +2,8 @@ package pageUIs.dee;
 
 public class ProductListPageUI {
 	public static final String PRODUCTS_LIST = "//div[contains(@class,'product_container')]";
+	public static final String NULL_PRODUCT_LIST = "//div[@id='tile_1']";
+
 	public static final String DYNAMIC_PRODUCT_TYPE = "//div[contains(@class,'product_container')][%s]//span[@class='listingProductType']";
 	public static final String DYNAMIC_PRODUCT_NAME = "//div[contains(@class,'product_container')][%s]//span[@class='listingProductName']";
 	public static final String DYNAMIC_PRODUCT_COLOR = "//div[contains(@class,'product_container')][%s]//div[@class='color-variant-box']";
