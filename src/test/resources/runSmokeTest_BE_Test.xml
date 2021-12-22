@@ -10,9 +10,14 @@
 	<test name="Test on BE_nl test">
 		<parameter name="url" value="https://test.deerberg.be/nl" />
 		<packages>
-			<package name="user" />
-			<package name="checkout" />
  			<package name="url" />
+		</packages>
+	</test>
+
+	<test name="Test on BE_fr test">
+		<parameter name="url" value="https://test.deerberg.be/fr" />
+		<packages>
+			<package name="url" />
 		</packages>
 	</test>
 </suite>
