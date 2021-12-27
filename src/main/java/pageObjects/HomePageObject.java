@@ -63,16 +63,15 @@ public class HomePageObject extends BasePage {
 	}
 
 	public boolean isTopNavigationDisplayed() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		overrideGlobalTimeOut(driver, 10);
 		int topNavigationSize = getElementsSize(driver, BasePageUI.TOP_NAVIGATION);
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		overrideGlobalTimeOut(driver, 60);
 		return (topNavigationSize >= 1);
 	}
 
 
 	public ArrayList<String> getBrokenLink(ArrayList<String> allLinks) {
 		ArrayList<String> brokenLinks = new ArrayList<String>();
-		ArrayList<String> emptyCategorys = new ArrayList<String>();
 		for (String getUrl : allLinks) {
 			driver.get(getUrl);
 			if (getPageUrl(driver).contains("?noCache") || !isTopNavigationDisplayed() || isCategoryEmpty()) {
@@ -82,10 +81,41 @@ public class HomePageObject extends BasePage {
 		return brokenLinks;
 	}
 
+	public ArrayList<String> getBrokenLinkAfterSwitchLang(ArrayList<String> allLinks) {
+		ArrayList<String> brokenLinksAfterSwitch = new ArrayList<String>();
+		for (String getUrl : allLinks) {
+			driver.get(getUrl);
+			if (!getPageUrl(driver).contains("?noCache")){
+				overrideGlobalTimeOut(driver, 1);
+				int switchLangSize = getElementsSize(driver, BasePageUI.LANGUAGE_SELECTOR);
+				overrideGlobalTimeOut(driver, 60);
+				if (switchLangSize == 1){
+					waitForElementVisible(driver, BasePageUI.LANGUAGE_SELECTOR);
+					clickOnElement(driver, BasePageUI.LANGUAGE_SELECTOR);
+					waitForElementVisible(driver, BasePageUI.LANGUAGE_INACTIVE);
+					clickOnElement(driver, BasePageUI.LANGUAGE_INACTIVE);
+					String urlAfterSwitch = getPageUrl(driver);
+					if (urlAfterSwitch.contains("?noCache")){
+						brokenLinksAfterSwitch.add(getUrl);
+					}else {
+						waitForElementVisible(driver, BasePageUI.LANGUAGE_SELECTOR);
+						clickOnElement(driver, BasePageUI.LANGUAGE_SELECTOR);
+						waitForElementVisible(driver, BasePageUI.LANGUAGE_INACTIVE);
+						clickOnElement(driver, BasePageUI.LANGUAGE_INACTIVE);
+						if (getPageUrl(driver).contains("?noCache")){
+							brokenLinksAfterSwitch.add(urlAfterSwitch);
+						}
+					}
+				}
+			}
+		}
+		return brokenLinksAfterSwitch;
+	}
+
 	public boolean isCategoryEmpty() {
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+		overrideGlobalTimeOut(driver, 1);
 		int nullItemSize = getElementsSize(driver, ProductListPageUI.NULL_PRODUCT_LIST);
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		overrideGlobalTimeOut(driver, 60);
 		return (nullItemSize == 1);
 	}
 
