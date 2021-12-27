@@ -12,7 +12,9 @@
 		<packages>
 			<package name="user" />
 			<package name="checkout" />
- 			<package name="url" />
 		</packages>
+		<classes>
+			<class name="url.Url_01_Check_Broken_URL_And_Empty_Category"/>
+		</classes>
 	</test>
 </suite>
