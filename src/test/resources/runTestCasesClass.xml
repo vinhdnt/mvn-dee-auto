@@ -8,7 +8,7 @@
 		<listener class-name="commons.MethodListener" />
 	</listeners>
 	<test name="Test case">
-		<parameter name="url" value="https://test.deerberg.de/" />
+		<parameter name="url" value="https://www.deerberg.de/" />
 		<!--<classes>-->
 			<!--<class name="user.User_02_Wish_List" />-->
  			<!--<class name="checkout.CO_01_Add_To_Cart" />-->
