@@ -1,9 +1,6 @@
 package pageObjects;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import jdk.internal.vm.compiler.word.ComparableWord;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
