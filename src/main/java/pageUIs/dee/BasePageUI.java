@@ -6,12 +6,13 @@ public class BasePageUI {
 	public static final String PROMO_LAYER_CLOSE_BUTTON = "//div[@data-wps-popup-content]//div[@aria-label='close']";
 	public static final String MY_ACCOUNT_LINK_HEADER = "//a[@id='checkInNav']";
 	public static final String WISH_LIST_ICON_HEADER = "//a[@id='wishlist-icon']";
+	public static final String WISH_LIST_ITEM_COUNT = "//span[@id='wishList-item-count']";
+
 	public static final String LOGOUT_LINK_HEADER = "//span[starts-with(@id,'logoutLink')]";
 	public static final String DYNAMIC_MAIN_CATEGORY_HEADER = "//li[contains(@class,'main-cat')][%s]//a[@class='main_catg_link']";
 	public static final String TOP_NAVIGATION = "//div[@id='topNavigation']//ul[@id='nav-md']";
 	public static final String LANGUAGE_SELECTOR = "//div[contains(@class,'language-selector')]";
 	public static final String LANGUAGE_INACTIVE = "//div[@class='setting-language__list-item ']";
-
 
 	public static final String CART_ICON_HEADER = "//li[@id='cart-icon']//div[contains(@class,'icon-image')]";
 	public static final String CART_ITEM_COUNT_HEADER = "//span[@id='bask-item-count']";

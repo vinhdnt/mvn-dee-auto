@@ -1,7 +1,5 @@
 package pageObjects;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
@@ -127,4 +125,24 @@ public class ProductDetailPageObject extends BasePage {
 		return PageGeneratorManager.getCheckOutPage(driver);
 	}
 
+    public void clickOnAdd2WishList() {
+		waitForElementVisible(driver, ProductDetailPageUI.ADD2WISHLIST_BUTTON);
+		clickOnElement(driver, ProductDetailPageUI.ADD2WISHLIST_BUTTON);
+    }
+
+	public boolean isAdd2WishListMsgPDLDisplayed() {
+		waitForElementVisible(driver, ProductDetailPageUI.ADD2WISHLIST_SUCCESSFUL_MSG);
+		return isElementDisplayed(driver, ProductDetailPageUI.ADD2WISHLIST_SUCCESSFUL_MSG);
+	}
+
+
+	public boolean isAdd2WishListMsgPDPDisplayed() {
+		waitForElementVisible(driver, ProductDetailPageUI.ADD2WISHLIST_SUCCESSFUL_MSG_PDP);
+		return isElementDisplayed(driver, ProductDetailPageUI.ADD2WISHLIST_SUCCESSFUL_MSG_PDP);
+	}
+
+	public int getWishListItemCount() {
+		waitForElementVisible(driver, BasePageUI.WISH_LIST_ITEM_COUNT);
+		return Integer.parseInt(getElementText(driver, BasePageUI.WISH_LIST_ITEM_COUNT));
+	}
 }

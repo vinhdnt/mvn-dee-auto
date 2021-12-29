@@ -8,19 +8,19 @@
 		<listener class-name="commons.MethodListener" />
 	</listeners>
 	<test name="Test case">
-		<parameter name="url" value="https://test.deerberg.be/fr/" />
-		<classes>
+		<parameter name="url" value="https://test.deerberg.de/" />
+		<!--<classes>-->
 			<!--<class name="user.User_02_Wish_List" />-->
  			<!--<class name="checkout.CO_01_Add_To_Cart" />-->
  			<!--<class name="checkout.CO_02_Check_Out_Main_Flow" />-->
 			<!--<class name="url.Url_01_Check_Broken_URL_And_Empty_Category" />-->
-			<class name="url.Url_02_Check_Switch_Lang" />
-		</classes>
-		<!--<packages>
+			<!--<class name="url.Url_02_Check_Switch_Lang" />-->
+		<!--</classes>-->
+		<packages>
 			<package name="user" />
-			<package name="checkout" />
-			<package name="url" />
-		</packages>-->
+			<!--<package name="checkout" />-->
+			<!--<package name="url" />-->
+		</packages>
 	</test>
 
 </suite>

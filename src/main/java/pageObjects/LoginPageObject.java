@@ -30,6 +30,12 @@ public class LoginPageObject extends BasePage {
 
 	}
 
+	public void loginWithValidUserNamePassword(String email, String password) {
+		inputEmailTextbox(email);
+		inputPasswordTextbox(password);
+		clickOnLoginButton();
+	}
+
 	public MyAccountPageObject clickOnLoginButton() {
 		waitForElementClickable(driver, LoginPageUI.LOGIN_SUBMIT_BUTTON);
 		clickOnElement(driver, LoginPageUI.LOGIN_SUBMIT_BUTTON);

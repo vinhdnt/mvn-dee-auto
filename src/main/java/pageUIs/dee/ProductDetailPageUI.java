@@ -10,5 +10,7 @@ public class ProductDetailPageUI {
 	public static final String PRODUCT_ONE_SIZE = "//div[contains(@class,'select-size')]//div[contains(@class,'oneSize-container')]";
 	
 	public static final String ADD2CART_BUTTON = "//input[@id='addToBasket']";
-
+	public static final String ADD2WISHLIST_BUTTON = "//div[@id='addToWishList']";
+	public static final String ADD2WISHLIST_SUCCESSFUL_MSG = "//div[@id='add-wishlist-success']";
+    public static final String ADD2WISHLIST_SUCCESSFUL_MSG_PDP ="//a[@href='user/wish-list']//parent::div[@class='alert alert-success  alert-dismissible']";
 }

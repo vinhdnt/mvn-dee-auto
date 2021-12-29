@@ -34,6 +34,16 @@ public class MyAccountPageObject extends BasePage {
 	public boolean isLogoutFieldOnHeaderDisplayed() {
 		return isElementDisplayed(driver, BasePageUI.LOGOUT_FIELD);
 	}
-	
 
+
+	public void removeWishListItemByIndex(String indexItem) {
+		waitForElementVisible(driver, MyAccountPageUI.DYNAMIC_REMOVE_PRODUCT_ADDED_ICON_IN_WISH_LIST , indexItem);
+		clickOnElement(driver, MyAccountPageUI.DYNAMIC_REMOVE_PRODUCT_ADDED_ICON_IN_WISH_LIST , indexItem);
+	}
+
+
+	public boolean isNoItemWishListMsgDisplayed() {
+		waitForElementVisible(driver, MyAccountPageUI.NO_ITEM_WISH_LIST_MSG);
+		return isElementDisplayed(driver, MyAccountPageUI.NO_ITEM_WISH_LIST_MSG);
+	}
 }

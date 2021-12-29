@@ -3,6 +3,7 @@ package pageObjects;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import jdk.internal.vm.compiler.word.ComparableWord;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -147,13 +148,18 @@ public class ProductListPageObject extends BasePage {
 	}
 
 	public void clickOnWishListIconByIndex(String indexItem) {
-		waitForAllElementsVisible(driver, ProductListPageUI.DYNAMIC_WISH_LIST_ICON, indexItem);
+				waitForAllElementsVisible(driver, ProductListPageUI.DYNAMIC_WISH_LIST_ICON, indexItem);
 		clickOnElement(driver, ProductListPageUI.DYNAMIC_WISH_LIST_ICON, indexItem);
 	}
 
 	public boolean isWishListIconSelected(String indexItem) {
 		waitForElementVisible(driver, ProductListPageUI.DYNAMIC_WISH_LIST_SELECTED_ICON, indexItem);
 		return isElementDisplayed(driver, ProductListPageUI.DYNAMIC_WISH_LIST_SELECTED_ICON, indexItem);
+	}
+
+	public boolean isWishListIconUnselected(String indexItem) {
+		waitForElementVisible(driver, ProductListPageUI.DYNAMIC_WISH_LIST_ICON, indexItem);
+		return isElementDisplayed(driver, ProductListPageUI.DYNAMIC_WISH_LIST_ICON, indexItem);
 	}
 
 	public MyAccountPageObject clickOnWishListIconOnHeader() {
@@ -165,5 +171,24 @@ public class ProductListPageObject extends BasePage {
 	public boolean isAdd2WishListMsgDisplayed() {
 		waitForElementVisible(driver, ProductListPageUI.ADD2WISHLIST_MSG);
 		return isElementDisplayed(driver, ProductListPageUI.ADD2WISHLIST_MSG);
+	}
+
+
+	public int getWishListItemCount() {
+		sleepInSecond(2);
+		waitForElementVisible(driver, BasePageUI.WISH_LIST_ITEM_COUNT);
+		return Integer.parseInt(getElementText(driver, BasePageUI.WISH_LIST_ITEM_COUNT));
+	}
+
+	public void clickOnWishListSelectedIconByIndex(String indexItem) {
+		overrideGlobalTimeOut(driver, 1);
+		int refreshCount = 1;
+		while (refreshCount <= 10 && (getElementsSize(driver, ProductListPageUI.DYNAMIC_WISH_LIST_SELECTED_ICON, indexItem) == 0)){
+			refreshCurrentPage(driver);
+			refreshCount++;
+		}
+		overrideGlobalTimeOut(driver, 60);
+		waitForAllElementsVisible(driver, ProductListPageUI.DYNAMIC_WISH_LIST_SELECTED_ICON, indexItem);
+		clickOnElement(driver, ProductListPageUI.DYNAMIC_WISH_LIST_SELECTED_ICON, indexItem);
 	}
 }

@@ -25,6 +25,7 @@ import com.google.common.base.Function;
 import pageObjects.HomePageObject;
 import pageObjects.LoginPageObject;
 import pageUIs.dee.BasePageUI;
+import pageUIs.dee.LoginPageUI;
 
 public class BasePage {
 
@@ -174,6 +175,10 @@ public class BasePage {
 
 	public int getElementsSize(WebDriver driver, String locator) {
 		return getElements(driver, locator).size();
+	}
+
+	public int getElementsSize(WebDriver driver, String locator, String... params) {
+		return getElements(driver, getDynamicLocator(locator, params)).size();
 	}
 
 	public void selectDropdownByText(WebDriver driver, String locator, String itemText) {
@@ -542,6 +547,7 @@ public class BasePage {
 		clickOnElement(driver, BasePageUI.MY_ACCOUNT_LINK_HEADER);
 		return PageGeneratorManager.getLoginPage(driver);
 	}
+
 
 	public HomePageObject clickOnLogoutHeader(WebDriver driver) {
 		waitForElementVisible(driver, BasePageUI.LOGOUT_LINK_HEADER);
