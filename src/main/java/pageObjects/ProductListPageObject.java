@@ -25,11 +25,7 @@ public class ProductListPageObject extends BasePage {
 		overrideGlobalTimeOut(driver, shortTimeOut);
 		int dropdownSize = getElementsSize(driver, ProductListPageUI.PRODUCT_SIZE_DROPDOWN);
 		overrideGlobalTimeOut(driver, longTimeOut);
-		if (dropdownSize >= 1) {
-			return true;
-		} else {
-			return false;
-		}
+		return  (dropdownSize >= 1);
 	}
 
 	public String getProductSize() {
