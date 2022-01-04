@@ -127,11 +127,7 @@ public class ProductListPageObject extends BasePage {
 
 	public boolean isCartItemCountBlank() {
 		waitForElementInvisible(driver, BasePageUI.CART_ITEM_COUNT_HEADER);
-		if (!isElementDisplayed(driver, BasePageUI.CART_ITEM_COUNT_HEADER)) {
-			return true;
-		} else {
-			return false;
-		}
+		return !isElementDisplayed(driver, BasePageUI.CART_ITEM_COUNT_HEADER);
 	}
 
 	public ProductDetailPageObject clickOnProductName(String indexItem) {
@@ -141,7 +137,7 @@ public class ProductListPageObject extends BasePage {
 	}
 
 	public void clickOnWishListIconByIndex(String indexItem) {
-				waitForAllElementsVisible(driver, ProductListPageUI.DYNAMIC_WISH_LIST_ICON, indexItem);
+		waitForAllElementsVisible(driver, ProductListPageUI.DYNAMIC_WISH_LIST_ICON, indexItem);
 		clickOnElement(driver, ProductListPageUI.DYNAMIC_WISH_LIST_ICON, indexItem);
 	}
 

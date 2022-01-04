@@ -20,10 +20,10 @@
 
 	<test name="Test on CH_de">
 		<parameter name="url" value="https://www.deerberg.ch/de" />
-		<packages>
+		<!--<packages>
 			<package name="user" />
 			<package name="checkout" />
-		</packages>
+		</packages>-->
 		<classes>
 			<class name="url.Url_01_Check_Broken_URL_And_Empty_Category"/>
 		</classes>
@@ -31,10 +31,10 @@
 
 	<test name="Test on CH_fr">
 		<parameter name="url" value="https://www.deerberg.ch/fr" />
-		<packages>
+		<!--<packages>
 			<package name="user" />
 			<package name="checkout" />
-		</packages>
+		</packages>-->
 		<classes>
 			<class name="url.Url_01_Check_Broken_URL_And_Empty_Category"/>
 		</classes>
@@ -43,10 +43,10 @@
 
 	<test name="Test on AT_de">
 		<parameter name="url" value="https://www.deerberg.at/de" />
-		<packages>
+		<!--<packages>
 			<package name="user" />
 			<package name="checkout" />
-		</packages>
+		</packages>-->
 		<classes>
 			<class name="url.Url_01_Check_Broken_URL_And_Empty_Category"/>
 		</classes>
@@ -55,10 +55,10 @@
 
 	<test name="Test on NL_nl">
 		<parameter name="url" value="https://www.deerberg.nl/nl" />
-		<packages>
+		<!--<packages>
 			<package name="user" />
 			<package name="checkout" />
-		</packages>
+		</packages>-->
 		<classes>
 			<class name="url.Url_01_Check_Broken_URL_And_Empty_Category"/>
 		</classes>
