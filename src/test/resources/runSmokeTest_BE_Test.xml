@@ -7,15 +7,15 @@
 		<listener class-name="commons.MethodListener" />
 	</listeners>
 
-	<test name="Test on BE_nl test">
-		<parameter name="url" value="https://test.deerberg.be/nl" />
+	<test name="Test on BE_nl">
+		<parameter name="url" value="https://deerberg.be/nl" />
 		<packages>
  			<package name="url" />
 		</packages>
 	</test>
 
-	<test name="Test on BE_fr test">
-		<parameter name="url" value="https://test.deerberg.be/fr" />
+	<test name="Test on BE_fr">
+		<parameter name="url" value="https://deerberg.be/fr" />
 		<packages>
 			<package name="url" />
 		</packages>

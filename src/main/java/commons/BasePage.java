@@ -281,10 +281,9 @@ public class BasePage {
 		overrideGlobalTimeOut(driver, longTimeOut);
 		if (elements.size() == 0) {
 			return true;
-		} else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
-			return true;
 		} else {
-			return false;
+			elements.size();
+			return !elements.get(0).isDisplayed();
 		}
 	}
 
@@ -435,11 +434,7 @@ public class BasePage {
 	public boolean isImageLoaded(WebDriver driver, String locator) {
 		jsExecutor = (JavascriptExecutor) driver;
 		boolean status = (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", getElement(driver, locator));
-		if (status) {
-			return true;
-		} else {
-			return false;
-		}
+		return status;
 	}
 
 	public void waitForElementVisible(WebDriver driver, String locator) {
