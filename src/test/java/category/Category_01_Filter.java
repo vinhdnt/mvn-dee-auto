@@ -26,13 +26,24 @@ public class Category_01_Filter extends BaseTest {
 
     @Test
     public void TC_01_Add_1_Filter() {
+        log.info("TC_01_Add_Filter  - Step 1: Click on accept 'Cookie Consent'");
+        homePage.clickOnAcceptCookieConsentButton();
+
         log.info("TC_01_Add_Filter - Check and close 'promo-layer'");
+        homePage.checkAndClosePromoLayer(driver);
 
         log.info("TC_01_Add_Filter - Step 02: Click on '2nd-category' on 'Top Category'");
+        productListPage = homePage.clickOnCategoryHeaderByIndex("2");
 
-        log.info("TC_01_Add_Filter - Step 03: Click on 'color' filter");
+        log.info("TC_01_Add_Filter - Check and close 'promo-layer'");
+        productListPage.checkAndClosePromoLayer(driver);
 
-        log.info("TC_01_Add_Filter - Step 04: Click on 'blue' variant");
+        log.info("TC_01_Add_Filter - Step 03: Click on 'Brand' filter");
+        //productListPage.clickOnFilterBox("Brand");
+
+        log.info("TC_01_Add_Filter - Step 04: Click on 'Deerberg' option");
+        //productListPage.clickOnFilterOption("Deerberg");
+
 
         log.info("TC_01_Add_Filter - Step 05: Click on 'submit filter' button");
 
