@@ -1,5 +1,6 @@
 package category;
 
+import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -14,6 +15,7 @@ import pageObjects.ProductListPageObject;
 
 public class Category_01_Filter extends BaseTest {
     WebDriver driver;
+    BasePage basepage;
 
     @Parameters({ "browser", "url" })
     @BeforeClass
@@ -39,17 +41,22 @@ public class Category_01_Filter extends BaseTest {
         productListPage.checkAndClosePromoLayer(driver);
 
         log.info("TC_01_Add_Filter - Step 03: Click on 'Brand' filter");
-        //productListPage.clickOnFilterBox("Brand");
+        productListPage.clickOnFilterBoxByID("md_brand_f_");
 
         log.info("TC_01_Add_Filter - Step 04: Click on 'Deerberg' option");
-        //productListPage.clickOnFilterOption("Deerberg");
-
+        productListPage.clickOnFilterOptionByID("brand_f__Deerberg");
 
         log.info("TC_01_Add_Filter - Step 05: Click on 'submit filter' button");
+        productListPage.clickOnSubmitFilterButtonByID("subMenu_brand_f_");
 
         log.info("TC_01_Add_Filter - Step 06: Verify url have filter parameter");
+        verifyTrue(driver.getCurrentUrl().contains("query?manufacturer=Deerberg"));
 
-        log.info("TC_01_Add_Filter - Step 07: Verify 'blue' filter be checked");
+        log.info("TC_01_Add_Filter - Step 07: Verify 'product list' are displayedd");
+        verifyTrue(productListPage.isProductsListDisplayed());
+
+        log.info("TC_01_Add_Filter - Step 08: Verify 'Deerberg' brand is filtered");
+        verifyTrue(productListPage.isFilterDisplaySelected("Deerberg"));
     }
 
     @Test

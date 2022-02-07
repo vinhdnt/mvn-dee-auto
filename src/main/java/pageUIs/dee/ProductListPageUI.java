@@ -17,4 +17,11 @@ public class ProductListPageUI {
 	public static final String DYNAMIC_SHOW_EXPAND_PRODUCT_BUTTON = "//div[contains(@class,'product_container')][%s]//div[@class='show-popup-addToBasket']//span";
 	public static final String ADD2CART_BUTTON = "//input[starts-with(@id,'addToBasket')]";
 
+	public static final String DYNAMIC_FILTER_BY_ID = "//div[@id='%s']";
+	public static final String DYNAMIC_OPTION_FILTER_BY_ID = "//label[@for='%s']";
+	public static final String DYNAMIC_FILTER_SUBMIT_BUTTON = "//ul[@id='%s']//a[@class='btn btnOrange btnFilter width150']";
+	public static final String DYNAMIC_FILTER_SELECTED = "//div[contains(.,'%s') and contains(@class,' selected_filter_btn ')]";
+
+
+
 }

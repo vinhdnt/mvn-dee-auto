@@ -180,4 +180,26 @@ public class ProductListPageObject extends BasePage {
 		waitForAllElementsVisible(driver, ProductListPageUI.DYNAMIC_WISH_LIST_SELECTED_ICON, indexItem);
 		clickOnElement(driver, ProductListPageUI.DYNAMIC_WISH_LIST_SELECTED_ICON, indexItem);
 	}
+
+    public void clickOnFilterBoxByID(String filterID) {
+		waitForElementVisible(driver, ProductListPageUI.DYNAMIC_FILTER_BY_ID, filterID);
+		clickOnElement(driver, ProductListPageUI.DYNAMIC_FILTER_BY_ID, filterID);
+    }
+
+	public void clickOnFilterOptionByID(String optionID) {
+		waitForElementVisible(driver, ProductListPageUI.DYNAMIC_OPTION_FILTER_BY_ID, optionID);
+		clickOnElement(driver, ProductListPageUI.DYNAMIC_OPTION_FILTER_BY_ID, optionID);
+	}
+
+	public void clickOnSubmitFilterButtonByID(String submenuFilterID) {
+		waitForElementVisible(driver, ProductListPageUI.DYNAMIC_FILTER_SUBMIT_BUTTON, submenuFilterID);
+		clickOnElement(driver, ProductListPageUI.DYNAMIC_FILTER_SUBMIT_BUTTON, submenuFilterID);
+	}
+
+
+	public boolean isFilterDisplaySelected(String filterOptionName) {
+		waitForElementVisible(driver, ProductListPageUI.DYNAMIC_FILTER_SELECTED, filterOptionName);
+		return isElementDisplayed(driver, ProductListPageUI.DYNAMIC_FILTER_SELECTED, filterOptionName);
+	}
+
 }

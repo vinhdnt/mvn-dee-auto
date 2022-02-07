@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >-->
 <suite parallel="false" name="Run Test Case Class">
 
 	<listeners>
@@ -8,7 +8,7 @@
 		<listener class-name="commons.MethodListener" />
 	</listeners>
 	<test name="Test case">
-		<parameter name="url" value="https://www.deerberg.de/" />
+		<parameter name="url" value="https://www.deerberg.de/de" />
 		<!--<classes>-->
 			<!--<class name="user.User_02_Wish_List" />-->
  			<!--<class name="checkout.CO_01_Add_To_Cart" />-->
@@ -17,7 +17,7 @@
 			<!--<class name="url.Url_02_Check_Switch_Lang" />-->
 		<!--</classes>-->
 		<packages>
-			<package name="user" />
+			<package name="category" />
 			<!--<package name="checkout" />-->
 			<!--<package name="url" />-->
 		</packages>
