@@ -10,6 +10,7 @@
 	<test name="Test on DE_de">
 		<parameter name="url" value="https://www.deerberg.de/de" />
 		<packages>
+			<package name="category" />
 			<package name="user" />
 			<package name="checkout" />
 		</packages>

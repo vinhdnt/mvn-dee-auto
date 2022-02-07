@@ -52,7 +52,7 @@ public class Category_01_Filter extends BaseTest {
         log.info("TC_01_Add_Filter - Step 06: Verify url have filter parameter");
         verifyTrue(driver.getCurrentUrl().contains("query?manufacturer=Deerberg"));
 
-        log.info("TC_01_Add_Filter - Step 07: Verify 'product list' are displayedd");
+        log.info("TC_01_Add_Filter - Step 07: Verify 'product list' are displayed");
         verifyTrue(productListPage.isProductsListDisplayed());
 
         log.info("TC_01_Add_Filter - Step 08: Verify 'Deerberg' brand is filtered");

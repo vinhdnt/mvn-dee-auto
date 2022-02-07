@@ -58,7 +58,13 @@
 		<appender-ref ref="file" />
 		<appender-ref ref="reportng" />
 	</category>
-
+	<category name="category">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+		<appender-ref ref="reportng" />
+	</category>
 	<root>
 		<priority value="warn" />
 	</root>
