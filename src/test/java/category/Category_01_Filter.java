@@ -59,7 +59,7 @@ public class Category_01_Filter extends BaseTest {
         verifyTrue(productListPage.isFilterDisplaySelected("Deerberg"));
     }
 
-    //@Test
+    @Test
     public void TC_02_Remove_Filter() {
 
     }
