@@ -144,7 +144,7 @@ public class User_02_Wish_List  extends BaseTest {
         log.info("TC_05_Logged_In_Add_To_Wish_List_At_PDP - Step 1: Click on '2nd product' to go PDP");
         productDetailPageObject = productListPage.clickOnProductName("2");
 
-        log.info("TC_05_Logged_In_Add_To_Wish_List_At_PDP - Step 2: Click on '2nd product' to go PDP");
+        log.info("TC_05_Logged_In_Add_To_Wish_List_At_PDP - Step 2: Click on Add2Wishlist button");
         productDetailPageObject.clickOnAdd2WishList();
 
         log.info("TC_05_Logged_In_Add_To_Wish_List_At_PDP - Step 3: Verify 'Successful msg add2wishlist' is displayed");

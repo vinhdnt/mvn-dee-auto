@@ -60,7 +60,7 @@ public class Category_01_Filter extends BaseTest {
     }
 
     //@Test
-    public void TC_02_Remove_Filter() {
+    public void TC_02_Remove_Filters() {
 
     }
 
