@@ -23,5 +23,5 @@ public class ProductListPageUI {
 	public static final String DYNAMIC_FILTER_SELECTED = "//div[contains(.,'%s') and contains(@class,' selected_filter_btn ')]";
 
 
-
+    public static final String SEARCH_RESULT_TEXT = "//div[@class='col-xs-12 seo-top']";
 }

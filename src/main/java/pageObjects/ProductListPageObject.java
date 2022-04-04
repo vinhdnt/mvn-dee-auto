@@ -202,4 +202,8 @@ public class ProductListPageObject extends BasePage {
 		return isElementDisplayed(driver, ProductListPageUI.DYNAMIC_FILTER_SELECTED, filterOptionName);
 	}
 
+    public boolean isSearchResultDisplayed() {
+		waitForElementVisible(driver, ProductListPageUI.SEARCH_RESULT_TEXT);
+		return isElementDisplayed(driver, ProductListPageUI.SEARCH_RESULT_TEXT);
+    }
 }

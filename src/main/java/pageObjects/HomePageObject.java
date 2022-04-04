@@ -128,4 +128,15 @@ public class HomePageObject extends BasePage {
 		return isElementUndisplayed(driver, BasePageUI.LOGOUT_FIELD);
 	}
 
+
+	public void inputSearchKeyword(String keyWord) {
+		waitForElementVisible(driver, HomePageUI.SEARCH_FIELD);
+		sendKeyToElement(driver,HomePageUI.SEARCH_FIELD, keyWord);
+	}
+
+	public ProductListPageObject clickOnSearchButton() {
+		waitForElementVisible(driver, HomePageUI.SEARCH_ICON);
+		clickOnElement(driver, HomePageUI.SEARCH_ICON);
+		return PageGeneratorManager.getProductListPage(driver);
+	}
 }
