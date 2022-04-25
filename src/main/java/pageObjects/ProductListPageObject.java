@@ -197,13 +197,25 @@ public class ProductListPageObject extends BasePage {
 	}
 
 
-	public boolean isFilterDisplaySelected(String filterOptionName) {
+	public boolean isFilterSelectDisplayed(String filterOptionName) {
 		waitForElementVisible(driver, ProductListPageUI.DYNAMIC_FILTER_SELECTED, filterOptionName);
 		return isElementDisplayed(driver, ProductListPageUI.DYNAMIC_FILTER_SELECTED, filterOptionName);
+	}
+
+	public boolean isFilterSelectUndisplayed(String filterOptionName) {
+		overrideGlobalTimeOut(driver, shortTimeOut);
+		int i = getElementsSize(driver, ProductListPageUI.DYNAMIC_FILTER_SELECTED, filterOptionName);
+		overrideGlobalTimeOut(driver, longTimeOut);
+		return i==0;
 	}
 
     public boolean isSearchResultDisplayed() {
 		waitForElementVisible(driver, ProductListPageUI.SEARCH_RESULT_TEXT);
 		return isElementDisplayed(driver, ProductListPageUI.SEARCH_RESULT_TEXT);
     }
+
+	public void clickOnRemoveFilterSelectedIcon(String filterOptionName) {
+		waitForElementVisible(driver, ProductListPageUI.DYNAMIC_REMOVE_FILTER_SELECTED_ICON, filterOptionName);
+		clickOnElement(driver, ProductListPageUI.DYNAMIC_REMOVE_FILTER_SELECTED_ICON, filterOptionName);
+	}
 }

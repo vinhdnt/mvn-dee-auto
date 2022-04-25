@@ -56,11 +56,20 @@ public class Category_01_Filter extends BaseTest {
         verifyTrue(productListPage.isProductsListDisplayed());
 
         log.info("TC_01_Add_Filter - Step 08: Verify 'Deerberg' brand is filtered");
-        verifyTrue(productListPage.isFilterDisplaySelected("Deerberg"));
+        verifyTrue(productListPage.isFilterSelectDisplayed("Deerberg"));
     }
 
-    //@Test
+    @Test
     public void TC_02_Remove_Filters() {
+        log.info("TC_02_Remove_Filters  - Step 1: Click on remove filter icon");
+        productListPage.clickOnRemoveFilterSelectedIcon("Deerberg");
+
+        log.info("TC_02_Remove_Filters  - Step 2: Verify url is not contain filter's parameter");
+        verifyFalse(driver.getCurrentUrl().contains("manufacturer=Deerberg"));
+
+        log.info("TC_02_Remove_Filters  - Step 3: Verify filter was removed");
+        verifyTrue(productListPage.isFilterSelectUndisplayed("Deerberg"));
+
 
     }
 

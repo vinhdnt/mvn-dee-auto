@@ -21,7 +21,7 @@ public class ProductListPageUI {
 	public static final String DYNAMIC_OPTION_FILTER_BY_ID = "//label[@for='%s']";
 	public static final String DYNAMIC_FILTER_SUBMIT_BUTTON = "//ul[@id='%s']//a[@class='btn btnOrange btnFilter width150']";
 	public static final String DYNAMIC_FILTER_SELECTED = "//div[contains(.,'%s') and contains(@class,' selected_filter_btn ')]";
+	public static final String DYNAMIC_REMOVE_FILTER_SELECTED_ICON = "//div[contains(.,'%s') and contains(@class,' selected_filter_btn ')]/a[contains(@class,'delete-filter icon')]";
 
-
-    public static final String SEARCH_RESULT_TEXT = "//div[@class='col-xs-12 seo-top']";
+	public static final String SEARCH_RESULT_TEXT = "//div[@class='col-xs-12 seo-top']";
 }

@@ -33,24 +33,25 @@ public class Category_02_Search extends BaseTest {
         log.info("TC_01_Search_With_Correct_Keyword  - Step 3: Input search keyword: 'deerberg'");
         homePage.inputSearchKeyword("deerberg");
 
-        log.info("TC_01_Search_With_Correct_Keyword  - Step 4: Click on 'Search' button");
+        log.info("TC_01_Search_With_Correct_Keyword  - Step 4: Verify quick search is displayed");
+        verifyTrue(homePage.isQuickSearchDisplayed());
+
+        log.info("TC_01_Search_With_Correct_Keyword  - Step 5: Click on 'Search' button");
         productListPage = homePage.clickOnSearchButton();
 
         log.info("TC_01_Search_With_Correct_Keyword - Check and close 'promo-layer'");
         productListPage.checkAndClosePromoLayer(driver);
 
-        log.info("TC_01_Search_With_Correct_Keyword  - Step 5:  Verify url contain filter's parameter");
+        log.info("TC_01_Search_With_Correct_Keyword  - Step 6:  Verify url contain filter's parameter");
         verifyTrue(driver.getCurrentUrl().contains("fullTextSearch?queryString=deerberg"));
 
-        log.info("TC_01_Search_With_Correct_Keyword  - Step 6:  Verify search result title is displayed");
+        log.info("TC_01_Search_With_Correct_Keyword  - Step 7:  Verify search result title is displayed");
         verifyTrue(productListPage.isSearchResultDisplayed());
 
-        log.info("TC_01_Search_With_Correct_Keyword  - Step 7:  Verify 'product list' are displayed");
+        log.info("TC_01_Search_With_Correct_Keyword  - Step 8:  Verify 'product list' are displayed");
         verifyTrue(productListPage.isProductsListDisplayed());
 
     }
-
-
 
 
     @AfterClass(alwaysRun = true)

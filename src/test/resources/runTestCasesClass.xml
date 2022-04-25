@@ -11,11 +11,13 @@
 		<parameter name="url" value="https://www.deerberg.de/de" />
 		<classes>
 			<!--<class name="user.User_02_Wish_List" />-->
+			<class name="user.User_01_Register_Login" />
  			<!--<class name="checkout.CO_01_Add_To_Cart" />-->
  			<!--<class name="checkout.CO_02_Check_Out_Main_Flow" />-->
 			<!--<class name="url.Url_01_Check_Broken_URL_And_Empty_Category" />-->
 			<!--<class name="url.Url_02_Check_Switch_Lang" />-->
-            <class name="category.Category_02_Search" />
+            <!--<class name="category.Category_02_Search" />-->
+			<!--<class name="category.Category_01_Filter" />-->
 		</classes>
 		<!--<packages>-->
 			<!--<package name="category" />-->

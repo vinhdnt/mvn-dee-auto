@@ -31,4 +31,5 @@ public class BasePageUI {
 	
 	public static final String ALL_URL = "//*[@href]";
 
+    public static final String QUICK_SEARCH_CONTAINER = "//div[@class='quickresult_container']";
 }

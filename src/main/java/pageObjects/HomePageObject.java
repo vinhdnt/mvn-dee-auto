@@ -139,4 +139,9 @@ public class HomePageObject extends BasePage {
 		clickOnElement(driver, HomePageUI.SEARCH_ICON);
 		return PageGeneratorManager.getProductListPage(driver);
 	}
+
+    public boolean isQuickSearchDisplayed() {
+		waitForElementVisible(driver, BasePageUI.QUICK_SEARCH_CONTAINER);
+		return isElementDisplayed(driver, BasePageUI.QUICK_SEARCH_CONTAINER);
+    }
 }
