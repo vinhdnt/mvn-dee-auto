@@ -19,11 +19,6 @@
             <!--<class name="category.Category_02_Search" />-->
 			<!--<class name="category.Category_01_Filter" />-->
 		</classes>
-		<!--<packages>-->
-			<!--<package name="category" />-->
-			<!--<package name="checkout" />-->
-			<!--<package name="url" />-->
-		<!--</packages>-->
 	</test>
 
 </suite>

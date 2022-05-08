@@ -13,9 +13,9 @@ public class RegisterPageObject extends BasePage {
 		this.driver = driver;
 	}
 
-	public void selectGenderDropdown() {
+	public void selectGenderDropdown(String gender) {
 		waitForElementVisible(driver, RegisterPageUI.GENDER_DROPDOWN);
-		selectDropdownByValue(driver, RegisterPageUI.GENDER_DROPDOWN, "MR");
+		selectDropdownByValue(driver, RegisterPageUI.GENDER_DROPDOWN, gender);
 	}
 
 	public void inputFirstNameTextbox(String string) {

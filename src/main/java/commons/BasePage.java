@@ -33,16 +33,34 @@ public class BasePage {
 		return new BasePage();
 	}
 
+	public WebElement getElement(WebDriver driver, String locator) {
+		return driver.findElement(getByXpath(locator));
+	}
+
+	public void clickOnElement(WebDriver driver, String locator) {
+		getElement(driver, locator).click();
+	}
+
+	public void sendKeyToElement(WebDriver driver, String locator, String value) {
+		getElement(driver, locator).clear();
+		getElement(driver, locator).sendKeys(value);
+	}
+
+	public void selectDropdownByValue(WebDriver driver, String locator, String itemValue) {
+		select = new Select(getElement(driver, locator));
+		select.selectByValue(itemValue);
+	}
+
+	public String getPageUrl(WebDriver driver) {
+		return driver.getCurrentUrl();
+	}
+
 	public void openPageUrl(WebDriver driver, String pageUrl) {
 		driver.get(pageUrl);
 	}
 
 	public String getPageTitle(WebDriver driver) {
 		return driver.getTitle();
-	}
-
-	public String getPageUrl(WebDriver driver) {
-		return driver.getCurrentUrl();
 	}
 
 	public String getPageSource(WebDriver driver) {
@@ -144,10 +162,6 @@ public class BasePage {
 		driver.navigate().refresh();
 	}
 
-	public WebElement getElement(WebDriver driver, String locator) {
-		return driver.findElement(getByXpath(locator));
-	}
-
 	public List<WebElement> getElements(WebDriver driver, String locator) {
 		return driver.findElements(getByXpath(locator));
 	}
@@ -160,17 +174,8 @@ public class BasePage {
 		return String.format(locator, (Object[]) params);
 	}
 
-	public void clickOnElement(WebDriver driver, String locator) {
-		getElement(driver, locator).click();
-	}
-
 	public void clickOnElement(WebDriver driver, String locator, String... params) {
 		getElement(driver, getDynamicLocator(locator, params)).click();
-	}
-
-	public void sendKeyToElement(WebDriver driver, String locator, String value) {
-		getElement(driver, locator).clear();
-		getElement(driver, locator).sendKeys(value);
 	}
 
 	public int getElementsSize(WebDriver driver, String locator) {
@@ -184,11 +189,6 @@ public class BasePage {
 	public void selectDropdownByText(WebDriver driver, String locator, String itemText) {
 		select = new Select(getElement(driver, locator));
 		select.selectByVisibleText(itemText.trim());
-	}
-
-	public void selectDropdownByValue(WebDriver driver, String locator, String itemValue) {
-		select = new Select(getElement(driver, locator));
-		select.selectByValue(itemValue);
 	}
 
 	public List<WebElement> getOptionsDropdown(WebDriver driver, String locator) {
@@ -316,6 +316,7 @@ public class BasePage {
 		action = new Actions(driver);
 		action.doubleClick(getElement(driver, locator)).perform();
 	}
+
 
 	public void rightClickOnElement(WebDriver driver, String locator) {
 		action = new Actions(driver);
@@ -495,8 +496,8 @@ public class BasePage {
 	}
 
 	public void checkAndClosePromoLayer(WebDriver driver) {
-		sleepInSecond(5);
-		overrideGlobalTimeOut(driver, 15);
+		//sleepInSecond(5);
+		overrideGlobalTimeOut(driver, 10);
 		List<WebElement> elements = getElements(driver, BasePageUI.PROMO_LAYER);
 		overrideGlobalTimeOut(driver, longTimeOut);
 		System.out.println(elements.size());

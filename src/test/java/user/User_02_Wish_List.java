@@ -69,7 +69,6 @@ public class User_02_Wish_List  extends BaseTest {
         verifyTrue(productListPage.isWishListIconSelected("1"));*/
     }
 
-
     @Test
     public void TC_02_No_Login_Add_To_Wish_List_At_PDP() {
         log.info("TC_02_No_Login_Add_To_Wish_List_At_PDP - Step 1: Click on '2nd product' to go PDP");
@@ -127,7 +126,7 @@ public class User_02_Wish_List  extends BaseTest {
         loginPageObject = productListPage.clickOnMyAccountOnHeader(driver);
 
         log.info("TC_04_Logged_In_Add_To_Wish_List_At_PDL - Step 2: Login with valid email password: " + User_01_Register_Login.EMAIL +"/" + User_01_Register_Login.PASSWORD );
-        loginPageObject.loginWithValidUserNamePassword(User_01_Register_Login.EMAIL, User_01_Register_Login.PASSWORD);
+        loginPageObject.loginWithUserNamePassword(User_01_Register_Login.EMAIL, User_01_Register_Login.PASSWORD);
 
         log.info("TC_04_Logged_In_Add_To_Wish_List_At_PDL - Step 4: Click on '2nd-category' on 'Top Category'");
         productListPage = homePage.clickOnCategoryHeaderByIndex("2");

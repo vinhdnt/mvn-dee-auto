@@ -42,7 +42,7 @@ public class User_01_Register_Login extends BaseTest {
 	@Test
 	public void TC_01_Register_With_Valid_User_Name_Password() {		
 		log.info("TC_01_Register_With_Valid_User_Name_Password - Step 2: Verify 'Wordpress page home page' is displayed");
-		//verifyTrue(homePage.isWordPressDisplayed());
+		verifyTrue(homePage.isWordPressDisplayed());
 		
 		log.info("TC_01_Register_With_Valid_User_Name_Password - Step 3: Verify 'Cookie consent' is displayed");
 		verifyTrue(homePage.isCookieConsentDisplayed());
@@ -63,7 +63,7 @@ public class User_01_Register_Login extends BaseTest {
 		registerPage = loginPage.clickOnRegisterButton();
 		
 		log.info("TC_01_Register_With_Valid_User_Name_Password - Step 8: Select 'Gender' dropdown");
-		registerPage.selectGenderDropdown();
+		registerPage.selectGenderDropdown("MR");
 		
 		log.info("TC_01_Register_With_Valid_User_Name_Password - Step 9: Input 'First name' textbox");
 		registerPage.inputFirstNameTextbox(firstName);
@@ -118,15 +118,15 @@ public class User_01_Register_Login extends BaseTest {
 		
 		log.info("TC_03_Login_With_Valid_User_Name_Password - Step 4: Click on 'Login' submit button");
 		myAccountPage = loginPage.clickOnLoginButton();
-		
+
 		log.info("TC_03_Login_With_Valid_User_Name_Password - Step 5: Verify 'Logout' button on header is displayed");
 		verifyTrue(myAccountPage.isLogoutFieldOnHeaderDisplayed()); 
 		
 		log.info("TC_03_Login_With_Valid_User_Name_Password - Step 6: Verify 'User's full name'");
 		verifyEquals(myAccountPage.getUserFullNameGreeting(), firstName + " " + lastName);
 
-
 	}
+
 
 	@AfterClass(alwaysRun = true)
 	public void afterClass() {

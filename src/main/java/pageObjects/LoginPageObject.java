@@ -24,15 +24,15 @@ public class LoginPageObject extends BasePage {
 		sendKeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, email);
 	}
 
-	public void inputPasswordTextbox(String password) {
+	public void inputPasswordTextbox(String passWord) {
 		waitForElementVisible(driver, LoginPageUI.PASSWORD_TEXTBOX);
-		sendKeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, password);
+		sendKeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, passWord);
 
 	}
 
-	public void loginWithValidUserNamePassword(String email, String password) {
+	public void loginWithUserNamePassword(String email, String passWord) {
 		inputEmailTextbox(email);
-		inputPasswordTextbox(password);
+		inputPasswordTextbox(passWord);
 		clickOnLoginButton();
 	}
 
@@ -42,4 +42,7 @@ public class LoginPageObject extends BasePage {
 		return PageGeneratorManager.getMyAccountPage(driver);
 	}
 
+	public boolean isLoginFailErrorMsgDisplayed() {
+		return isElementDisplayed(driver, LoginPageUI.LOGIN_FAIL_ERROR_MSG);
+	}
 }
