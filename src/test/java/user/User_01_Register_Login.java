@@ -106,23 +106,41 @@ public class User_01_Register_Login extends BaseTest {
 	}
 
 	@Test
-	public void TC_03_Login_With_Valid_User_Name_Password() {
-		log.info("TC_03_Login_With_Valid_User_Name_Password - Step 1: Click on 'My account' on header");
+	public void TC_03_Login_With_Invalid_User_Name_Password() {
+		log.info("TC_03_Login_With_Invalid_User_Name_Password - Step 1: Click on 'My account' on header");
+		loginPage = homePage.clickOnMyAccountOnHeader(driver);
+
+		log.info("TC_03_Login_With_Invalid_User_Name_Password - Step 2: Input invalid Email to 'Email textbox'");
+		loginPage.inputEmailTextbox("balapbaxam@qa.team");
+
+		log.info("TC_03_Login_With_Invalid_User_Name_Password - Step 3: Input invalid Password to 'Password textbox'");
+		loginPage.inputPasswordTextbox("568578678");
+
+		log.info("TC_03_Login_With_Invalid_User_Name_Password - Step 4: Click  on 'Login' submit button");
+		loginPage.clickOnLoginButton();
+
+		log.info("TC_03_Login_With_Invalid_User_Name_Password - Step 5: Verify login fail error msg is displayed");
+		verifyTrue(loginPage.isLoginFailErrorMsgDisplayed());
+	}
+
+	@Test
+	public void TC_04_Login_With_Valid_User_Name_Password() {
+		log.info("TC_04_Login_With_Valid_User_Name_Password - Step 1: Click on 'My account' on header");
 		loginPage = homePage.clickOnMyAccountOnHeader(driver);
 		
-		log.info("TC_03_Login_With_Valid_User_Name_Password - Step 2: Input 'Email' textbox: "+EMAIL);
+		log.info("TC_04_Login_With_Valid_User_Name_Password - Step 2: Input 'Email' textbox: "+EMAIL);
 		loginPage.inputEmailTextbox(EMAIL);
 		
-		log.info("TC_03_Login_With_Valid_User_Name_Password - Step 3: Input 'Password' textbox: "+PASSWORD);
+		log.info("TC_04_Login_With_Valid_User_Name_Password - Step 3: Input 'Password' textbox: "+PASSWORD);
 		loginPage.inputPasswordTextbox(PASSWORD);
 		
-		log.info("TC_03_Login_With_Valid_User_Name_Password - Step 4: Click on 'Login' submit button");
+		log.info("TC_04_Login_With_Valid_User_Name_Password - Step 4: Click on 'Login' submit button");
 		myAccountPage = loginPage.clickOnLoginButton();
 
-		log.info("TC_03_Login_With_Valid_User_Name_Password - Step 5: Verify 'Logout' button on header is displayed");
+		log.info("TC_04_Login_With_Valid_User_Name_Password - Step 5: Verify 'Logout' button on header is displayed");
 		verifyTrue(myAccountPage.isLogoutFieldOnHeaderDisplayed()); 
 		
-		log.info("TC_03_Login_With_Valid_User_Name_Password - Step 6: Verify 'User's full name'");
+		log.info("TC_04_Login_With_Valid_User_Name_Password - Step 6: Verify 'User's full name'");
 		verifyEquals(myAccountPage.getUserFullNameGreeting(), firstName + " " + lastName);
 
 	}
