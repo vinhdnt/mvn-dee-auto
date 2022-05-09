@@ -42,7 +42,4 @@ public class LoginPageObject extends BasePage {
 		return PageGeneratorManager.getMyAccountPage(driver);
 	}
 
-	public boolean isLoginFailErrorMsgDisplayed() {
-		return isElementDisplayed(driver, LoginPageUI.LOGIN_FAIL_ERROR_MSG);
-	}
 }

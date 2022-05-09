@@ -134,6 +134,7 @@ public class User_01_Register_Login extends BaseTest {
 		cleanBrowserAndDriver();
 	}
 
+
 	HomePageObject homePage;
 	LoginPageObject loginPage;
 	RegisterPageObject registerPage;
