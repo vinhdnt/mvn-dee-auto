@@ -11,7 +11,6 @@ import commons.BasePage;
 import commons.PageGeneratorManager;
 import pageUIs.dee.BasePageUI;
 import pageUIs.dee.HomePageUI;
-import pageUIs.dee.ProductDetailPageUI;
 import pageUIs.dee.ProductListPageUI;
 
 public class HomePageObject extends BasePage {

@@ -52,10 +52,10 @@ public class User_02_Wish_List  extends BaseTest {
         verifyTrue(productListPage.getWishListItemCount() == 1);
 
         log.info("TC_01_No_Login_Add_To_Wish_List_At_PDL - Step 9: Go to 'wishlist-page' by click on wishlist icon on header");
-        myAccountPageObject = productListPage.clickOnWishListIconOnHeader();
+        myAccountPage = productListPage.clickOnWishListIconOnHeader();
 
         log.info("TC_01_No_Login_Add_To_Wish_List_At_PDL - Step 10: Get '1st-product added wishlist's name'");
-        productAddedName = myAccountPageObject.getProductAddedWishListNameByIndex("1");
+        productAddedName = myAccountPage.getProductAddedWishListNameByIndex("1");
 
         log.info("TC_01_No_Login_Add_To_Wish_List_At_PDL - Step 11: Verify added-wishlist's name'");
         verifyTrue(productAddedName.contains(productName));
@@ -72,16 +72,16 @@ public class User_02_Wish_List  extends BaseTest {
     @Test
     public void TC_02_No_Login_Add_To_Wish_List_At_PDP() {
         log.info("TC_02_No_Login_Add_To_Wish_List_At_PDP - Step 1: Click on '2nd product' to go PDP");
-        productDetailPageObject = productListPage.clickOnProductName("2");
+        productDetailPage = productListPage.clickOnProductName("2");
 
         log.info("TC_02_No_Login_Add_To_Wish_List_At_PDP - Step 2: Click on 'add2wishlist'");
-        productDetailPageObject.clickOnAdd2WishList();
+        productDetailPage.clickOnAdd2WishList();
 
         log.info("TC_02_No_Login_Add_To_Wish_List_At_PDP - Step 3: Verify 'Successful msg add2wishlist' is displayed");
-        verifyTrue(productDetailPageObject.isAdd2WishListMsgPDLDisplayed());
+        verifyTrue(productDetailPage.isAdd2WishListMsgPDLDisplayed());
 
         log.info("TC_02_No_Login_Add_To_Wish_List_At_PDL - Step 4: Verify 'Wish-list icon count' = 2");
-        verifyTrue(productDetailPageObject.getWishListItemCount() == 2);
+        verifyTrue(productDetailPage.getWishListItemCount() == 2);
 
         log.info("TC_02_No_Login_Add_To_Wish_List_At_PDL - Step 5: Click on '2nd-category' on 'Top Category'");
         productListPage = homePage.clickOnCategoryHeaderByIndex("2");
@@ -105,28 +105,28 @@ public class User_02_Wish_List  extends BaseTest {
         verifyTrue(productListPage.getWishListItemCount() == 1);
 
         log.info("TC_03_Remove_Wish_List_Added_Item_At_PDL - Step 4: Go to 'wishlist-page' by click on wishlist icon on header");
-        myAccountPageObject = productListPage.clickOnWishListIconOnHeader();
+        myAccountPage = productListPage.clickOnWishListIconOnHeader();
 
         sleepInSecond(3);
 
         log.info("TC_03_Remove_Wish_List_Added_Item_At_PDL - Step 5: Remove 'first Wish-list item'");
-        myAccountPageObject.removeWishListItemByIndex("1");
+        myAccountPage.removeWishListItemByIndex("1");
 
         log.info("TC_03_Remove_Wish_List_Added_Item_At_PDL - Step 6: Verify 'Wish-list icon count' = 0");
         verifyTrue(productListPage.getWishListItemCount() == 0);
 
         log.info("TC_03_Remove_Wish_List_Added_Item_At_PDL - Step 7: Verify 'Wish-list' page is empty");
-        verifyTrue(myAccountPageObject.isNoItemWishListMsgDisplayed());
+        verifyTrue(myAccountPage.isNoItemWishListMsgDisplayed());
 
     }
 
     @Test
     public void TC_04_Logged_In_Add_To_Wish_List_At_PDL() {
         log.info("TC_04_Logged_In_Add_To_Wish_List_At_PDL - Step 1: Click on My account header");
-        loginPageObject = productListPage.clickOnMyAccountOnHeader(driver);
+        loginPage = productListPage.clickOnMyAccountOnHeader(driver);
 
         log.info("TC_04_Logged_In_Add_To_Wish_List_At_PDL - Step 2: Login with valid email password: " + User_01_Register_Login.EMAIL +"/" + User_01_Register_Login.PASSWORD );
-        loginPageObject.loginWithUserNamePassword(User_01_Register_Login.EMAIL, User_01_Register_Login.PASSWORD);
+        loginPage.loginWithUserNamePassword(User_01_Register_Login.EMAIL, User_01_Register_Login.PASSWORD);
 
         log.info("TC_04_Logged_In_Add_To_Wish_List_At_PDL - Step 4: Click on '2nd-category' on 'Top Category'");
         productListPage = homePage.clickOnCategoryHeaderByIndex("2");
@@ -141,16 +141,16 @@ public class User_02_Wish_List  extends BaseTest {
     @Test
     public void TC_05_Logged_In_Add_To_Wish_List_At_PDP() {
         log.info("TC_05_Logged_In_Add_To_Wish_List_At_PDP - Step 1: Click on '2nd product' to go PDP");
-        productDetailPageObject = productListPage.clickOnProductName("2");
+        productDetailPage = productListPage.clickOnProductName("2");
 
         log.info("TC_05_Logged_In_Add_To_Wish_List_At_PDP - Step 2: Click on Add2Wishlist button");
-        productDetailPageObject.clickOnAdd2WishList();
+        productDetailPage.clickOnAdd2WishList();
 
         log.info("TC_05_Logged_In_Add_To_Wish_List_At_PDP - Step 3: Verify 'Successful msg add2wishlist' is displayed");
-        verifyTrue(productDetailPageObject.isAdd2WishListMsgPDPDisplayed());
+        verifyTrue(productDetailPage.isAdd2WishListMsgPDPDisplayed());
 
         log.info("TC_05_Logged_In_Add_To_Wish_List_At_PDP - Step 4: Verify 'Wish-list icon count' = 2");
-        verifyTrue(productDetailPageObject.getWishListItemCount() == 2);
+        verifyTrue(productDetailPage.getWishListItemCount() == 2);
 
         log.info("TC_05_Logged_In_Add_To_Wish_List_At_PDP - Step 5: Click on '2nd-category' on 'Top Category'");
         productListPage = homePage.clickOnCategoryHeaderByIndex("2");
@@ -173,18 +173,18 @@ public class User_02_Wish_List  extends BaseTest {
         verifyTrue(productListPage.getWishListItemCount() == 1);
 
         log.info("TC_06_Logged_In_Remove_Wish_List_Added - Step 4: Go to 'wishlist-page' by click on wishlist icon on header");
-        myAccountPageObject = productListPage.clickOnWishListIconOnHeader();
+        myAccountPage = productListPage.clickOnWishListIconOnHeader();
 
         sleepInSecond(3);
 
         log.info("TC_06_Logged_In_Remove_Wish_List_Added - Step 5: Remove 'first Wish-list item'");
-        myAccountPageObject.removeWishListItemByIndex("1");
+        myAccountPage.removeWishListItemByIndex("1");
 
         log.info("TC_06_Logged_In_Remove_Wish_List_Added - Step 6: Verify 'Wish-list icon count' = 0");
         verifyTrue(productListPage.getWishListItemCount() == 0);
 
         log.info("TC_06_Logged_In_Remove_Wish_List_Added - Step 7: Verify 'Wish-list' page is empty");
-        verifyTrue(myAccountPageObject.isNoItemWishListMsgDisplayed());
+        verifyTrue(myAccountPage.isNoItemWishListMsgDisplayed());
 
     }
 
@@ -196,9 +196,9 @@ public class User_02_Wish_List  extends BaseTest {
     }
     HomePageObject homePage;
     ProductListPageObject productListPage;
-    ProductDetailPageObject productDetailPageObject;
-    MyAccountPageObject myAccountPageObject;
-    LoginPageObject loginPageObject;
+    ProductDetailPageObject productDetailPage;
+    MyAccountPageObject myAccountPage;
+    LoginPageObject loginPage;
 }
 
 
